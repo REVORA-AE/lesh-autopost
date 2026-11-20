@@ -43,7 +43,8 @@
       "kind": "story",
       "file": "stories/s-1125-teaser.mp4",
       "publish_at": "2026-11-25T12:30:00+04:00",
-      "approved": true
+      "approved": false,
+      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
     },
     {
       "id": "002-tap-water",
@@ -51,30 +52,34 @@
       "publish_at": "2026-11-25T20:00:00+04:00",
       "thumb_offset_ms": 1100,
       "caption": "Where does Dubai's tap water come from?\nThe sea. Plants either boil seawater and catch the steam, or squeeze it through a membrane that stops over 99% of the salt.\nMinerals go back in before it reaches your tap.\nDubai can make about 495 million (imperial) gallons a day.\n\nSources: UAE Government portal u.ae, \"Water\" ; DEWA, Annual Statistics Booklet 2025 ; Dubai Media Office, DEWA's Jebel Ali complex enters Guinness World Records (2022) ; DEWA, Hassyan Seawater Reverse Osmosis Project ; IEEE TechNav, \"Reverse osmosis\"\n\nGot a lesh? Comment it, we'll explain it.\n#LeshExplained #UAE #Dubai #Desalination #HowItWorks",
-      "approved": true,
+      "approved": false,
       "cover": "002-tap-water-cover.jpg",
-      "duration_s": 55.8
+      "duration_s": 55.8,
+      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
     },
     {
       "id": "s-1125-new",
       "kind": "story",
       "file": "stories/s-1125-new.jpg",
       "publish_at": "2026-11-25T20:05:00+04:00",
-      "approved": true
+      "approved": false,
+      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
     },
     {
       "id": "s-1126-guess-q",
       "kind": "story",
       "file": "stories/s-1126-guess-q.jpg",
       "publish_at": "2026-11-26T13:00:00+04:00",
-      "approved": true
+      "approved": false,
+      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
     },
     {
       "id": "s-1126-guess-a",
       "kind": "story",
       "file": "stories/s-1126-guess-a.jpg",
       "publish_at": "2026-11-26T13:01:00+04:00",
-      "approved": true
+      "approved": false,
+      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
     },
     {
       "id": "s-1127-teaser",

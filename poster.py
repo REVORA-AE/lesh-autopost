@@ -4,6 +4,7 @@
 Modes:
   post        publish every approved post whose time has come (default)
   dry-run     do everything except the final publish (checks the token, the link and Instagram's processing)
+  (schedule.json entries with "kind": "story" go out as stories: an image or a video, no caption)
   insights    save the numbers for every posted reel into stats/YYYY-MM-DD.json
   refresh     extend the token's life (only Instagram login tokens; the business portfolio token never expires)
   check       print the account the token belongs to and the publishing limit
@@ -103,6 +104,9 @@ def me():
 
 
 def container(uid, post):
+    if post.get("kind") == "story":   # a story: one image or one video, no caption, no stickers
+        key = "video_url" if post["file"].endswith(".mp4") else "image_url"
+        return call("POST", "/%s/media" % uid, {"media_type": "STORIES", key: REPO_RAW + post["file"]})["id"]
     p = {
         "media_type": "REELS",
         "video_url": REPO_RAW + post["file"],
@@ -174,7 +178,7 @@ def do_post(dry=False):
         if not dry and now() > when + dt.timedelta(hours=12):
             log("SKIP", post["id"], "is more than 12 hours late; it needs a new time")
             continue
-        live = already_live(uid, post)
+        live = already_live(uid, post) if post.get("kind") != "story" else None
         if live and not dry:
             log("already on Instagram:", post["id"], live.get("permalink"))
             posted[post["id"]] = {"media_id": live["id"], "permalink": live.get("permalink"), "published_at": live.get("timestamp"), "note": "found live"}

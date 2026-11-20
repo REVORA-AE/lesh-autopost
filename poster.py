@@ -1,0 +1,245 @@
+#!/usr/bin/env python3
+"""LESH autopost: publishes approved, due reels to Instagram and pulls their stats.
+
+Modes:
+  post        publish every approved post whose time has come (default)
+  dry-run     do everything except the final publish (checks the token, the link and Instagram's processing)
+  insights    save the numbers for every posted reel into stats/YYYY-MM-DD.json
+  refresh     extend the token's life (Instagram tokens last 60 days) and keep it encrypted in token.enc
+  check       print the account the token belongs to and the publishing limit
+
+The token comes from the repo secret IG_TOKEN. After the first refresh the newest token lives in token.enc,
+encrypted with IG_TOKEN as the key, so the secret never has to be pasted again.
+"""
+import json, os, subprocess, sys, time, datetime as dt, urllib.parse, urllib.request, urllib.error
+
+API = "https://graph.instagram.com/v24.0"
+REPO_RAW = os.environ.get("MEDIA_BASE", "https://raw.githubusercontent.com/REVORA-AE/lesh-autopost/main/media/")
+HERE = os.path.dirname(os.path.abspath(__file__))
+UTC = dt.timezone.utc
+
+
+def now():
+    return dt.datetime.now(UTC)
+
+
+def log(*a):
+    print(now().strftime("%H:%M:%S"), *a, flush=True)
+
+
+def token():
+    secret = os.environ.get("IG_TOKEN", "").strip()
+    if not secret:
+        sys.exit("IG_TOKEN is not set (repo Settings > Secrets and variables > Actions)")
+    enc = os.path.join(HERE, "token.enc")
+    if os.path.exists(enc):
+        try:
+            out = subprocess.run(["openssl", "enc", "-d", "-aes-256-cbc", "-pbkdf2", "-a", "-A", "-in", enc, "-pass", "env:IG_TOKEN"],
+                                 capture_output=True, text=True, check=True).stdout.strip()
+            if out:
+                return out
+        except subprocess.CalledProcessError:
+            log("token.enc could not be read, using IG_TOKEN")
+    return secret
+
+
+TOKEN = None
+
+
+def call(method, path, params=None, timeout=60):
+    params = dict(params or {})
+    url = path if path.startswith("http") else API + path
+    data = None
+    headers = {"Authorization": "Bearer " + TOKEN}
+    if method == "GET":
+        if params:
+            url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
+    else:
+        data = urllib.parse.urlencode(params).encode()
+    req = urllib.request.Request(url, data=data, method=method, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode() or "{}")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace")
+        raise RuntimeError("%s %s -> %s %s" % (method, path, e.code, body[:600]))
+
+
+def load(name, default):
+    p = os.path.join(HERE, name)
+    return json.load(open(p)) if os.path.exists(p) else default
+
+
+def save(name, obj):
+    with open(os.path.join(HERE, name), "w") as f:
+        json.dump(obj, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+
+def parse_time(s):
+    return dt.datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(UTC)
+
+
+def me():
+    return call("GET", "/me", {"fields": "user_id,username,account_type"})
+
+
+def container(uid, post):
+    p = {
+        "media_type": "REELS",
+        "video_url": REPO_RAW + post["file"],
+        "caption": post["caption"],
+        "share_to_feed": "true",
+    }
+    if post.get("thumb_offset_ms") is not None:
+        p["thumb_offset"] = str(int(post["thumb_offset_ms"]))
+    if post.get("ai_label", True):
+        p["is_ai_generated"] = "true"
+    if post.get("trial"):   # trial reel: shown to non followers first. "SS_PERFORMANCE" = Instagram shares it to followers if it does well, "MANUAL" = share it in the app
+        p["trial_params"] = json.dumps({"graduation_strategy": post["trial"]})
+    try:
+        return call("POST", "/%s/media" % uid, p)["id"]
+    except RuntimeError as e:
+        if "is_ai_generated" in p and "is_ai_generated" in str(e):
+            log("WARNING: Instagram refused is_ai_generated, retrying without it and saying so in the caption.", e)
+            p.pop("is_ai_generated")
+            p["caption"] = p["caption"].rstrip() + "\n\nAI voiceover."
+            return call("POST", "/%s/media" % uid, p)["id"]
+        raise
+
+
+def wait_ready(cid, limit_s=900):
+    t0 = time.time()
+    while time.time() - t0 < limit_s:
+        st = call("GET", "/" + cid, {"fields": "status_code,status"})
+        code = st.get("status_code")
+        log("container", cid, code, st.get("status", ""))
+        if code == "FINISHED":
+            return True
+        if code in ("ERROR", "EXPIRED"):
+            raise RuntimeError("container %s failed: %s" % (cid, st))
+        time.sleep(15)
+    raise RuntimeError("container %s still processing after %ds" % (cid, limit_s))
+
+
+def already_live(uid, post):
+    """Guard against a double post: is a reel with the same first caption line already on the account?"""
+    first = post["caption"].strip().splitlines()[0].strip()
+    media = call("GET", "/%s/media" % uid, {"fields": "id,caption,timestamp,permalink", "limit": 10}).get("data", [])
+    for m in media:
+        if (m.get("caption") or "").strip().splitlines()[:1] == [first]:
+            return m
+    return None
+
+
+def git_pull():
+    subprocess.run(["git", "pull", "--rebase", "--quiet"], cwd=HERE)
+
+
+def do_post(dry=False):
+    git_pull()
+    sched = load("schedule.json", {"posts": []})["posts"]
+    posted = load("posted.json", {})
+    info = me()
+    uid = info["user_id"]
+    log("account @%s (%s)" % (info.get("username"), info.get("account_type")))
+    lead = dt.timedelta(minutes=40)
+    changed = False
+    for post in sorted(sched, key=lambda p: p["publish_at"]):
+        if post["id"] in posted or not post.get("approved"):
+            continue
+        when = parse_time(post["publish_at"])
+        if not dry and now() < when - lead:
+            continue
+        if not dry and now() > when + dt.timedelta(hours=12):
+            log("SKIP", post["id"], "is more than 12 hours late; it needs a new time")
+            continue
+        live = already_live(uid, post)
+        if live and not dry:
+            log("already on Instagram:", post["id"], live.get("permalink"))
+            posted[post["id"]] = {"media_id": live["id"], "permalink": live.get("permalink"), "published_at": live.get("timestamp"), "note": "found live"}
+            changed = True
+            continue
+        log("preparing", post["id"], "for", when.isoformat())
+        cid = container(uid, post)
+        wait_ready(cid)
+        if dry:
+            log("DRY RUN ok:", post["id"], "is ready to publish (container", cid, "will expire unused)")
+            if os.environ.get("DRY_ONE", "1") == "1":
+                break
+            continue
+        while now() < when:
+            time.sleep(min(30, max(1, (when - now()).total_seconds())))
+        res = call("POST", "/%s/media_publish" % uid, {"creation_id": cid})
+        mid = res["id"]
+        info2 = call("GET", "/" + mid, {"fields": "permalink,timestamp"})
+        posted[post["id"]] = {"media_id": mid, "permalink": info2.get("permalink"), "published_at": info2.get("timestamp"), "trial": post.get("trial"), "topic": post.get("topic", post["id"]), "variant": post.get("variant")}
+        log("PUBLISHED", post["id"], info2.get("permalink"))
+        save("posted.json", posted)
+        changed = True
+    if changed:
+        save("posted.json", posted)
+    return changed
+
+
+METRICS = ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions", "ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
+
+
+def do_insights():
+    posted = load("posted.json", {})
+    day = now().strftime("%Y-%m-%d")
+    out = {"taken_at": now().isoformat(), "reels": {}}
+    for pid, p in posted.items():
+        row = {"media_id": p["media_id"], "permalink": p.get("permalink")}
+        for m in METRICS:
+            try:
+                r = call("GET", "/%s/insights" % p["media_id"], {"metric": m})
+                row[m] = r["data"][0]["values"][0]["value"]
+            except Exception as e:  # a metric can be unavailable for a fresh reel
+                row[m] = None
+        try:
+            row.update(call("GET", "/" + p["media_id"], {"fields": "like_count,comments_count"}))
+        except Exception:
+            pass
+        out["reels"][pid] = row
+    try:
+        out["account"] = call("GET", "/me", {"fields": "followers_count,follows_count,media_count"})
+    except Exception as e:
+        out["account"] = {"error": str(e)[:200]}
+    os.makedirs(os.path.join(HERE, "stats"), exist_ok=True)
+    save("stats/%s.json" % day, out)
+    log("stats saved for", len(out["reels"]), "reels")
+
+
+def do_refresh():
+    r = call("GET", "https://graph.instagram.com/refresh_access_token", {"grant_type": "ig_refresh_token", "access_token": TOKEN})
+    new = r["access_token"]
+    p = subprocess.run(["openssl", "enc", "-aes-256-cbc", "-pbkdf2", "-a", "-A", "-salt", "-pass", "env:IG_TOKEN"],
+                       input=new, capture_output=True, text=True, check=True)
+    with open(os.path.join(HERE, "token.enc"), "w") as f:
+        f.write(p.stdout.strip() + "\n")
+    log("token refreshed, valid for about", int(r.get("expires_in", 0)) // 86400, "days")
+
+
+def main():
+    global TOKEN
+    mode = sys.argv[1] if len(sys.argv) > 1 else "post"
+    TOKEN = token()
+    if mode == "check":
+        print(json.dumps(me(), indent=2))
+        info = me()
+        print(json.dumps(call("GET", "/%s/content_publishing_limit" % info["user_id"], {"fields": "quota_usage,config"}), indent=2))
+    elif mode == "dry-run":
+        do_post(dry=True)
+    elif mode == "post":
+        do_post()
+    elif mode == "insights":
+        do_insights()
+    elif mode == "refresh":
+        do_refresh()
+    else:
+        sys.exit("unknown mode " + mode)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,46 @@
+name: LESH autopost
+on:
+  schedule:
+    - cron: "7,22,37,52 4-19 * * *"   # every 15 min, 8 am to midnight UAE: publish anything due
+    - cron: "17 5 * * *"              # 9:17 am UAE: save yesterday's numbers
+    - cron: "47 5 * * 1"              # Mondays: extend the token
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "post, dry-run, insights, refresh or check"
+        default: "check"
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: lesh-autopost
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pick the mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then m="${{ inputs.mode }}";
+          elif [ "${{ github.event.schedule }}" = "17 5 * * *" ]; then m=insights;
+          elif [ "${{ github.event.schedule }}" = "47 5 * * 1" ]; then m=refresh;
+          else m=post; fi
+          echo "mode=$m" >> "$GITHUB_OUTPUT"
+      - name: Run
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          git config user.name "lesh-autopost"
+          git config user.email "actions@users.noreply.github.com"
+          python3 poster.py ${{ steps.mode.outputs.mode }}
+      - name: Save results
+        if: always()
+        run: |
+          git add -A posted.json stats token.enc 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "autopost: ${{ steps.mode.outputs.mode }} $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase --quiet && git push --quiet
+          fi

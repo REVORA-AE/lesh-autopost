@@ -30,7 +30,8 @@ def log(*a):
 def token():
     secret = os.environ.get("IG_TOKEN", "").strip()
     if not secret:
-        sys.exit("IG_TOKEN is not set (repo Settings > Secrets and variables > Actions)")
+        print("IG_TOKEN is not set yet (repo Settings > Secrets and variables > Actions). Nothing to do.")
+        sys.exit(0)
     enc = os.path.join(HERE, "token.enc")
     if os.path.exists(enc):
         try:

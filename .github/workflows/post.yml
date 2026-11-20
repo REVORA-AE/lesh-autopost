@@ -4,6 +4,8 @@ on:
     - cron: "7,22,37,52 4-19 * * *"   # every 15 min, 8 am to midnight UAE: publish anything due
     - cron: "17 5 * * *"              # 9:17 am UAE: save yesterday's numbers
     - cron: "47 5 * * 1"              # Mondays: extend the token
+  push:                               # Claude can ask for a run by committing run/request.txt (first line = mode)
+    paths: ["run/request.txt"]
   workflow_dispatch:
     inputs:
       mode:
@@ -25,6 +27,7 @@ jobs:
         id: mode
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then m="${{ inputs.mode }}";
+          elif [ "${{ github.event_name }}" = "push" ]; then m=$(head -n 1 run/request.txt | tr -dc 'a-z-');
           elif [ "${{ github.event.schedule }}" = "17 5 * * *" ]; then m=insights;
           elif [ "${{ github.event.schedule }}" = "47 5 * * 1" ]; then m=refresh;
           else m=post; fi
@@ -36,11 +39,13 @@ jobs:
         run: |
           git config user.name "lesh-autopost"
           git config user.email "actions@users.noreply.github.com"
-          python3 poster.py ${{ steps.mode.outputs.mode }}
+          set -o pipefail
+          mkdir -p run
+          python3 poster.py ${{ steps.mode.outputs.mode }} 2>&1 | tee run/last.txt
       - name: Save results
         if: always()
         run: |
-          git add -A posted.json stats token.enc 2>/dev/null || true
+          git add -A posted.json stats token.enc run/last.txt 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "autopost: ${{ steps.mode.outputs.mode }} $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase --quiet && git push --quiet

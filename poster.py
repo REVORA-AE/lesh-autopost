@@ -89,7 +89,7 @@ def parse_time(s):
 def me():
     if not FB:
         return call("GET", "/me", {"fields": "user_id,username,account_type"})
-    uid = os.environ.get("IG_USER_ID", "").strip()
+    uid = os.environ.get("IG_USER_ID", "").strip() or "17841441425903061"  # @leshexplained
     if not uid:
         pages = call("GET", "/me/accounts", {"fields": "name,instagram_business_account{id,username}"}).get("data", [])
         for pg in pages:

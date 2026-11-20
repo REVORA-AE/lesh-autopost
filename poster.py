@@ -109,7 +109,9 @@ def container(uid, post):
         "caption": post["caption"],
         "share_to_feed": "true",
     }
-    if post.get("thumb_offset_ms") is not None:
+    if post.get("cover"):   # designed cover for the profile grid (wins over thumb_offset)
+        p["cover_url"] = REPO_RAW + post["cover"]
+    elif post.get("thumb_offset_ms") is not None:
         p["thumb_offset"] = str(int(post["thumb_offset_ms"]))
     if post.get("ai_label", True):
         p["is_ai_generated"] = "true"

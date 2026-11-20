@@ -6,7 +6,8 @@
       "publish_at": "2026-11-23T20:00:00+04:00",
       "thumb_offset_ms": 1300,
       "caption": "Who's driving the Dubai Metro?\nNobody. Computers drive every train, and each one keeps a moving bubble of empty track around it.\nAbout 20 people a shift watch the whole network from a control room in Al Rashidiya.\nAnd 99.7% of trips run on time.\n\nSources: Gulf News, \"Dubai Metro: How 9,000 cameras track 850,000 riders, 129 trains, 53 stations\" (2025) ; Gulf News, \"How technology powers Dubai's transport evolution\" (2025) ; Khaleej Times, \"This is how Dubai Metro's driverless trains run like clockwork\" ; Guinness World Records, \"Longest driverless metro line\" (2011) ; Dubai Media Office, \"Dubai Metro marks 15 years of transforming urban mass transit\" (2024)\n\nGot a lesh? Comment it, we'll explain it.\n#LeshExplained #UAE #DubaiMetro #Dubai #HowItWorks",
-      "approved": false
+      "approved": false,
+      "cover": "001-metro-cover.jpg"
     },
     {
       "id": "002-tap-water",
@@ -14,7 +15,8 @@
       "publish_at": "2026-11-25T20:00:00+04:00",
       "thumb_offset_ms": 1100,
       "caption": "Where does Dubai's tap water come from?\nThe sea. Plants either boil seawater and catch the steam, or squeeze it through a membrane that stops over 99% of the salt.\nMinerals go back in before it reaches your tap.\nDubai can make about 495 million (imperial) gallons a day.\n\nSources: UAE Government portal u.ae, \"Water\" ; DEWA, Annual Statistics Booklet 2025 ; Dubai Media Office, DEWA's Jebel Ali complex enters Guinness World Records (2022) ; DEWA, Hassyan Seawater Reverse Osmosis Project ; IEEE TechNav, \"Reverse osmosis\"\n\nGot a lesh? Comment it, we'll explain it.\n#LeshExplained #UAE #Dubai #Desalination #HowItWorks",
-      "approved": false
+      "approved": false,
+      "cover": "002-tap-water-cover.jpg"
     },
     {
       "id": "003-palm",
@@ -22,7 +24,8 @@
       "publish_at": "2026-11-27T20:00:00+04:00",
       "thumb_offset_ms": 1100,
       "caption": "What's holding up the Palm Jumeirah?\nSand and rock. No concrete, no steel.\nAn 11 km rock crescent went in first, then ships sprayed about 94 million cubic metres of sand into place, guided by GPS.\nThen the sand was vibrated tight so it can't act like a liquid in a quake.\n\nSources: Gulf News, \"Palm Jumeirah to leave an indelible impression\" ; Royal IHC, \"Creating the Palm Islands\" ; Arabian Business, \"Sand compaction still underway on the Palm\" ; Engineers Journal, \"Curious facts about Dubai's Palm Islands\" ; USC Illumin, \"The artificial natural world\"\n\nGot a lesh? Comment it, we'll explain it.\n#LeshExplained #UAE #PalmJumeirah #Dubai #Engineering",
-      "approved": false
+      "approved": false,
+      "cover": "003-palm-cover.jpg"
     }
   ]
 }

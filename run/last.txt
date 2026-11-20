@@ -1,16 +1,14 @@
-{
-  "user_id": "17841441425903061",
-  "username": "leshexplained",
-  "account_type": "business portfolio token"
-}
-{
-  "data": [
-    {
-      "quota_usage": 0,
-      "config": {
-        "quota_total": 100,
-        "quota_duration": 86400
-      }
-    }
-  ]
-}
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+20:24:30 account @leshexplained (business portfolio token)
+20:24:30 preparing s-1123-teaser for 2026-11-23T08:30:00+00:00
+20:24:31 container 18086272055380864 IN_PROGRESS In Progress: Media is still being processed.
+20:24:46 container 18086272055380864 IN_PROGRESS In Progress: Media is still being processed.
+20:25:01 container 18086272055380864 IN_PROGRESS In Progress: Media is still being processed.
+20:25:16 container 18086272055380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+20:25:16 DRY RUN ok: s-1123-teaser is ready to publish (container 18086272055380864 will expire unused)
+20:25:17 preparing 001-metro for 2026-11-23T16:00:00+00:00
+20:25:18 container 18086272499380864 IN_PROGRESS In Progress: Media is still being processed.
+20:25:33 container 18086272499380864 IN_PROGRESS In Progress: Media is still being processed.
+20:25:48 container 18086272499380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+20:25:48 DRY RUN ok: 001-metro is ready to publish (container 18086272499380864 will expire unused)

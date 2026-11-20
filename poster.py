@@ -14,7 +14,7 @@ encrypted with IG_TOKEN as the key, so the secret never has to be pasted again.
 import json, os, subprocess, sys, time, datetime as dt, urllib.parse, urllib.request, urllib.error
 
 API = "https://graph.instagram.com/v24.0"
-REPO_RAW = os.environ.get("MEDIA_BASE", "https://raw.githubusercontent.com/REVORA-AE/lesh-autopost/main/media/")
+REPO_RAW = os.environ.get("MEDIA_BASE", "https://revora-ae.github.io/lesh-autopost/media/")
 HERE = os.path.dirname(os.path.abspath(__file__))
 UTC = dt.timezone.utc
 

@@ -5,15 +5,19 @@ Modes:
   post        publish every approved post whose time has come (default)
   dry-run     do everything except the final publish (checks the token, the link and Instagram's processing)
   insights    save the numbers for every posted reel into stats/YYYY-MM-DD.json
-  refresh     extend the token's life (Instagram tokens last 60 days) and keep it encrypted in token.enc
+  refresh     extend the token's life (only Instagram login tokens; the business portfolio token never expires)
   check       print the account the token belongs to and the publishing limit
 
-The token comes from the repo secret IG_TOKEN. After the first refresh the newest token lives in token.enc,
-encrypted with IG_TOKEN as the key, so the secret never has to be pasted again.
+The token comes from the repo secret IG_TOKEN.
+  Business portfolio token (starts with EAA, never expires): calls go to graph.facebook.com and the Instagram
+  account id comes from IG_USER_ID, or is found through the Facebook Page the account is linked to.
+  Instagram login token (starts with IG): calls go to graph.instagram.com; after the first refresh the newest
+  token lives in token.enc, encrypted with IG_TOKEN as the key.
 """
 import json, os, subprocess, sys, time, datetime as dt, urllib.parse, urllib.request, urllib.error
 
 API = "https://graph.instagram.com/v24.0"
+FB = False
 REPO_RAW = os.environ.get("MEDIA_BASE", "https://revora-ae.github.io/lesh-autopost/media/")
 HERE = os.path.dirname(os.path.abspath(__file__))
 UTC = dt.timezone.utc
@@ -82,7 +86,20 @@ def parse_time(s):
 
 
 def me():
-    return call("GET", "/me", {"fields": "user_id,username,account_type"})
+    if not FB:
+        return call("GET", "/me", {"fields": "user_id,username,account_type"})
+    uid = os.environ.get("IG_USER_ID", "").strip()
+    if not uid:
+        pages = call("GET", "/me/accounts", {"fields": "name,instagram_business_account{id,username}"}).get("data", [])
+        for pg in pages:
+            ig = pg.get("instagram_business_account")
+            if ig:
+                uid = ig["id"]
+                break
+    if not uid:
+        sys.exit("No Instagram account id. Set the repo variable IG_USER_ID.")
+    info = call("GET", "/" + uid, {"fields": "id,username,followers_count,media_count"})
+    return {"user_id": uid, "username": info.get("username"), "account_type": "business portfolio token"}
 
 
 def container(uid, post):
@@ -204,7 +221,7 @@ def do_insights():
             pass
         out["reels"][pid] = row
     try:
-        out["account"] = call("GET", "/me", {"fields": "followers_count,follows_count,media_count"})
+        out["account"] = call("GET", "/" + me()["user_id"], {"fields": "followers_count,follows_count,media_count"})
     except Exception as e:
         out["account"] = {"error": str(e)[:200]}
     os.makedirs(os.path.join(HERE, "stats"), exist_ok=True)
@@ -213,6 +230,9 @@ def do_insights():
 
 
 def do_refresh():
+    if FB:
+        log("business portfolio token never expires; nothing to refresh")
+        return
     r = call("GET", "https://graph.instagram.com/refresh_access_token", {"grant_type": "ig_refresh_token", "access_token": TOKEN})
     new = r["access_token"]
     p = subprocess.run(["openssl", "enc", "-aes-256-cbc", "-pbkdf2", "-a", "-A", "-salt", "-pass", "env:IG_TOKEN"],
@@ -226,6 +246,10 @@ def main():
     global TOKEN
     mode = sys.argv[1] if len(sys.argv) > 1 else "post"
     TOKEN = token()
+    global API, FB
+    if TOKEN.startswith("EA"):
+        FB = True
+        API = "https://graph.facebook.com/v24.0"
     if mode == "check":
         print(json.dumps(me(), indent=2))
         info = me()

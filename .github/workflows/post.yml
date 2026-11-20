@@ -32,6 +32,7 @@ jobs:
       - name: Run
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
         run: |
           git config user.name "lesh-autopost"
           git config user.email "actions@users.noreply.github.com"

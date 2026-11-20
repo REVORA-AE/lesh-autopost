@@ -169,8 +169,11 @@ def do_post(dry=False):
     log("account @%s (%s)" % (info.get("username"), info.get("account_type")))
     lead = dt.timedelta(minutes=40)
     changed = False
+    tested = set()
     for post in sorted(sched, key=lambda p: p["publish_at"]):
-        if post["id"] in posted or not post.get("approved"):
+        if post["id"] in posted or (not post.get("approved") and not dry):   # a dry run never publishes, so it may test unapproved posts
+            continue
+        if dry and post.get("kind", "reel") in tested:
             continue
         when = parse_time(post["publish_at"])
         if not dry and now() < when - lead:
@@ -189,8 +192,7 @@ def do_post(dry=False):
         wait_ready(cid)
         if dry:
             log("DRY RUN ok:", post["id"], "is ready to publish (container", cid, "will expire unused)")
-            if os.environ.get("DRY_ONE", "1") == "1":
-                break
+            tested.add(post.get("kind", "reel"))   # one reel and one story are enough to prove the whole path
             continue
         while now() < when:
             time.sleep(min(30, max(1, (when - now()).total_seconds())))

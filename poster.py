@@ -5,6 +5,7 @@ Modes:
   post        publish every approved post whose time has come (default)
   dry-run     do everything except the final publish (checks the token, the link and Instagram's processing)
   (schedule.json entries with "kind": "story" go out as stories: an image or a video, no caption)
+  replies     post the comment replies Saif approved in replies.json
   comments    collect comments on our reels into comments/inbox.json (insights runs this too)
   insights    save the numbers for every posted reel into stats/YYYY-MM-DD.json
   refresh     extend the token's life (only Instagram login tokens; the business portfolio token never expires)
@@ -287,6 +288,26 @@ def do_comments():
     log("comments: %d new, %d in the inbox, %d open questions" % (new, len(inbox), sum(1 for c in inbox.values() if c["question"] and c["status"] == "new")))
 
 
+def do_replies():
+    """Post the comment replies Saif approved: replies.json entries with approved true and no sent_at.
+    Claude drafts them with approved false; only Saif's yes flips them."""
+    replies = load("replies.json", {"replies": []})
+    n = 0
+    for r in replies["replies"]:
+        if not r.get("approved") or r.get("sent_at"):
+            continue
+        try:
+            res = call("POST", "/%s/replies" % r["comment_id"], {"message": r["message"]})
+            r["sent_at"] = now().isoformat(); r["reply_id"] = res.get("id")
+            n += 1
+            log("replied to", r["comment_id"])
+        except Exception as e:
+            r["error"] = str(e)[:200]
+            log("reply failed for", r["comment_id"], str(e)[:200])
+    save("replies.json", replies)
+    log("replies sent:", n)
+
+
 def do_refresh():
     if FB:
         log("business portfolio token never expires; nothing to refresh")
@@ -321,6 +342,8 @@ def main():
         do_comments()
     elif mode == "comments":
         do_comments()
+    elif mode == "replies":
+        do_replies()
     elif mode == "refresh":
         do_refresh()
     else:

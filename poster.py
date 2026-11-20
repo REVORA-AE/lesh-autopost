@@ -5,6 +5,7 @@ Modes:
   post        publish every approved post whose time has come (default)
   dry-run     do everything except the final publish (checks the token, the link and Instagram's processing)
   (schedule.json entries with "kind": "story" go out as stories: an image or a video, no caption)
+  comments    collect comments on our reels into comments/inbox.json (insights runs this too)
   insights    save the numbers for every posted reel into stats/YYYY-MM-DD.json
   refresh     extend the token's life (only Instagram login tokens; the business portfolio token never expires)
   check       print the account the token belongs to and the publishing limit
@@ -15,7 +16,7 @@ The token comes from the repo secret IG_TOKEN.
   Instagram login token (starts with IG): calls go to graph.instagram.com; after the first refresh the newest
   token lives in token.enc, encrypted with IG_TOKEN as the key.
 """
-import json, os, subprocess, sys, time, datetime as dt, urllib.parse, urllib.request, urllib.error
+import json, os, re, subprocess, sys, time, datetime as dt, urllib.parse, urllib.request, urllib.error
 
 API = "https://graph.instagram.com/v24.0"
 FB = False
@@ -209,24 +210,43 @@ def do_post(dry=False):
 
 
 METRICS = ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions", "ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
+STORY_METRICS = ["reach", "views", "replies", "shares", "total_interactions"]
+
+
+def ratio(a, b):
+    return round(a / b, 4) if isinstance(a, (int, float)) and isinstance(b, (int, float)) and b else None
 
 
 def do_insights():
     posted = load("posted.json", {})
+    sched = {p["id"]: p for p in load("schedule.json", {"posts": []})["posts"]}
     day = now().strftime("%Y-%m-%d")
-    out = {"taken_at": now().isoformat(), "reels": {}}
+    out = {"taken_at": now().isoformat(), "reels": {}, "stories": {}}
     for pid, p in posted.items():
+        story = sched.get(pid, {}).get("kind") == "story"
         row = {"media_id": p["media_id"], "permalink": p.get("permalink")}
-        for m in METRICS:
+        for m in (STORY_METRICS if story else METRICS):
             try:
                 r = call("GET", "/%s/insights" % p["media_id"], {"metric": m})
-                row[m] = r["data"][0]["values"][0]["value"]
-            except Exception as e:  # a metric can be unavailable for a fresh reel
+                row[m] = r["data"][0]["values"][0]["value"] if "values" in r["data"][0] else r["data"][0].get("total_value", {}).get("value")
+            except Exception:  # a metric can be unavailable for a fresh reel, and story numbers vanish after 24 hours
                 row[m] = None
+        if story:
+            if any(row.get(m) is not None for m in STORY_METRICS):
+                out["stories"][pid] = row
+            continue
         try:
             row.update(call("GET", "/" + p["media_id"], {"fields": "like_count,comments_count"}))
         except Exception:
             pass
+        # the three signals Instagram ranks reels on, as ratios we can compare between reels
+        dur = sched.get(pid, {}).get("duration_s")
+        row["sends_per_reach"] = ratio(row.get("shares"), row.get("reach"))
+        row["likes_per_reach"] = ratio(row.get("likes"), row.get("reach"))
+        row["saves_per_reach"] = ratio(row.get("saved"), row.get("reach"))
+        aw = row.get("ig_reels_avg_watch_time")
+        row["avg_watch_s"] = round(aw / 1000, 2) if isinstance(aw, (int, float)) else None
+        row["watch_pct"] = ratio(row["avg_watch_s"], dur)
         out["reels"][pid] = row
     try:
         out["account"] = call("GET", "/" + me()["user_id"], {"fields": "followers_count,follows_count,media_count"})
@@ -234,7 +254,37 @@ def do_insights():
         out["account"] = {"error": str(e)[:200]}
     os.makedirs(os.path.join(HERE, "stats"), exist_ok=True)
     save("stats/%s.json" % day, out)
-    log("stats saved for", len(out["reels"]), "reels")
+    log("stats saved for", len(out["reels"]), "reels and", len(out["stories"]), "stories")
+
+
+QWORDS = re.compile(r"\?|؟|\b(why|how|what|who|when|where|which|lesh|explain|do|make|next|part 2|cover)\b|ليش|ليه|كيف|وش|شو|ايش|إيش|متى|وين|مين|اشرح|سوو|الجزء", re.I)
+
+
+def do_comments():
+    """Every comment on our reels goes into comments/inbox.json (no usernames: the repo is public).
+    Questions are flagged; Claude turns the best ones into reply drafts and new reel ideas."""
+    posted = load("posted.json", {})
+    sched = {p["id"]: p for p in load("schedule.json", {"posts": []})["posts"]}
+    inbox = load("comments/inbox.json", {})
+    new = 0
+    for pid, p in posted.items():
+        if sched.get(pid, {}).get("kind") == "story":
+            continue
+        try:
+            data = call("GET", "/%s/comments" % p["media_id"], {"fields": "id,text,timestamp,like_count", "limit": 100}).get("data", [])
+        except Exception as e:
+            log("comments unavailable for", pid, str(e)[:160])
+            continue
+        for c in data:
+            if c["id"] in inbox:
+                inbox[c["id"]]["like_count"] = c.get("like_count", 0)
+                continue
+            inbox[c["id"]] = {"reel": pid, "text": c.get("text", ""), "timestamp": c.get("timestamp"), "like_count": c.get("like_count", 0),
+                              "question": bool(QWORDS.search(c.get("text", ""))), "status": "new"}
+            new += 1
+    os.makedirs(os.path.join(HERE, "comments"), exist_ok=True)
+    save("comments/inbox.json", inbox)
+    log("comments: %d new, %d in the inbox, %d open questions" % (new, len(inbox), sum(1 for c in inbox.values() if c["question"] and c["status"] == "new")))
 
 
 def do_refresh():
@@ -268,6 +318,9 @@ def main():
         do_post()
     elif mode == "insights":
         do_insights()
+        do_comments()
+    elif mode == "comments":
+        do_comments()
     elif mode == "refresh":
         do_refresh()
     else:

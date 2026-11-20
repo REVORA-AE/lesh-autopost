@@ -45,7 +45,7 @@ jobs:
         if: always()
         run: |
           mkdir -p run && cp /tmp/last.txt run/last.txt 2>/dev/null || true
-          for p in posted.json stats token.enc run/last.txt; do [ -e "$p" ] && git add -A "$p"; done
+          for p in posted.json stats comments token.enc run/last.txt; do [ -e "$p" ] && git add -A "$p"; done
           if ! git diff --cached --quiet; then
             git commit -m "autopost: ${{ steps.mode.outputs.mode }} $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase --quiet && git push --quiet

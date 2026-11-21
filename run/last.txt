@@ -1,12 +1,11 @@
-06:55:35 account @leshexplained (business portfolio token)
-06:55:35 preparing s-1123-teaser for 2026-11-23T08:30:00+00:00
-06:55:37 container 18086379581380864 IN_PROGRESS In Progress: Media is still being processed.
-06:55:52 container 18086379581380864 IN_PROGRESS In Progress: Media is still being processed.
-06:56:08 container 18086379581380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-06:56:08 DRY RUN ok: s-1123-teaser is ready to publish (container 18086379581380864 will expire unused)
-06:56:08 preparing 001-metro for 2026-11-23T16:00:00+00:00
-06:56:10 container 18086379863380864 IN_PROGRESS In Progress: Media is still being processed.
-06:56:25 container 18086379863380864 IN_PROGRESS In Progress: Media is still being processed.
-06:56:41 container 18086379863380864 IN_PROGRESS In Progress: Media is still being processed.
-06:56:56 container 18086379863380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-06:56:56 DRY RUN ok: 001-metro is ready to publish (container 18086379863380864 will expire unused)
+07:29:56 account @leshexplained (business portfolio token)
+07:29:56 preparing s-1123-teaser for 2026-11-23T08:30:00+00:00
+07:29:59 container 18086384921380864 IN_PROGRESS In Progress: Media is still being processed.
+07:30:15 container 18086384921380864 IN_PROGRESS In Progress: Media is still being processed.
+07:30:30 container 18086384921380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+07:30:30 DRY RUN ok: s-1123-teaser is ready to publish (container 18086384921380864 will expire unused)
+07:30:32 preparing 001-metro for 2026-11-23T16:00:00+00:00
+07:30:34 container 18086385143380864 IN_PROGRESS In Progress: Media is still being processed.
+07:30:50 container 18086385143380864 IN_PROGRESS In Progress: Media is still being processed.
+07:31:06 container 18086385143380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+07:31:06 DRY RUN ok: 001-metro is ready to publish (container 18086385143380864 will expire unused)

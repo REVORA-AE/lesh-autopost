@@ -169,7 +169,7 @@ def do_post(dry=False):
     info = me()
     uid = info["user_id"]
     log("account @%s (%s)" % (info.get("username"), info.get("account_type")))
-    lead = dt.timedelta(minutes=40)
+    lead = dt.timedelta(minutes=150)   # a run that starts up to 2.5 hours early gets the post ready, then waits for the exact minute
     changed = False
     tested = set()
     for post in sorted(sched, key=lambda p: p["publish_at"]):

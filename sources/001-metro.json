@@ -3,7 +3,7 @@
   "n": "001",
   "title": "Who's driving the Dubai Metro?",
   "colour": "sun",
-  "checked": "2026-11-20",
+  "checked": "2026-11-21",
   "facts": [
     {
       "said": "There is no driver on board. Computers run every train.",
@@ -51,28 +51,6 @@
         {
           "name": "Gulf News, Dubai Metro: How 9,000 cameras track 850,000 riders (2025)",
           "url": "https://gulfnews.com/uae/dubai-metro-how-9000-cameras-track-850000-riders-101-trains-53-stations-1.500276324"
-        }
-      ]
-    },
-    {
-      "said": "The control centre is in Al Rashidiya, with about 20 staff per shift.",
-      "hold": true,
-      "sources": [
-        {
-          "name": "Gulf News, Dubai Metro: How 9,000 cameras track 850,000 riders (2025)",
-          "url": "https://gulfnews.com/uae/dubai-metro-how-9000-cameras-track-850000-riders-101-trains-53-stations-1.500276324"
-        },
-        {
-          "name": "The National (2025)"
-        }
-      ]
-    },
-    {
-      "said": "One button can suspend the entire service.",
-      "hold": true,
-      "sources": [
-        {
-          "name": "Khaleej Times, This is how Dubai Metro's driverless trains run like clockwork"
         }
       ]
     },

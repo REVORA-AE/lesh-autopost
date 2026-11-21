@@ -1,0 +1,86 @@
+{
+  "id": "002-tap-water",
+  "n": "002",
+  "title": "Where does Dubai's tap water come from?",
+  "colour": "sky",
+  "checked": "2026-11-21",
+  "note": "This reel explains the science only. Every drawing is a generic diagram, not a real place.",
+  "facts": [
+    {
+      "said": "Dubai's tap water starts as seawater with the salt taken out.",
+      "sources": [
+        {
+          "name": "UAE Government portal u.ae, Water",
+          "url": "https://u.ae/en/information-and-services/environment-and-energy/water-and-energy/water-"
+        }
+      ]
+    },
+    {
+      "said": "One way is to boil it: heat the seawater, the steam rises, the salt stays behind, and the cooled steam is fresh water.",
+      "sources": [
+        {
+          "name": "Membranes journal via PubMed Central, seawater reverse osmosis review (2021)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7920052"
+        }
+      ]
+    },
+    {
+      "said": "The other way is to squeeze it: pumps push seawater against a membrane at around 60 times normal air pressure.",
+      "sources": [
+        {
+          "name": "Membranes journal via PubMed Central, seawater reverse osmosis review (2021)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7920052"
+        },
+        {
+          "name": "IEEE TechNav, Reverse osmosis",
+          "url": "https://technav.ieee.org/topic/reverse-osmosis/"
+        }
+      ],
+      "note": "The review gives 5 to 7 megapascals, which is about 50 to 70 times normal air pressure."
+    },
+    {
+      "said": "Water gets through the membrane. Over 99% of the salt does not.",
+      "sources": [
+        {
+          "name": "IEEE TechNav, Reverse osmosis",
+          "url": "https://technav.ieee.org/topic/reverse-osmosis/"
+        }
+      ]
+    },
+    {
+      "said": "The salty leftover goes back to the sea.",
+      "sources": [
+        {
+          "name": "WateReuse Association, Seawater Concentrate Management (white paper)",
+          "url": "https://watereuse.org/wp-content/uploads/2015/10/Seawater_Concentrate_WP.pdf"
+        },
+        {
+          "name": "Science Times, How desalination plants use reverse osmosis and manage brine (Apr 2026)",
+          "url": "https://www.sciencetimes.com/articles/61729/20260428/how-desalination-plants-use-reverse-osmosis-turn-seawater-fresh-water-manage-brine-waste-ocean.htm"
+        }
+      ]
+    },
+    {
+      "said": "Squeezing takes less energy than boiling.",
+      "sources": [
+        {
+          "name": "USGS, Reverse osmosis desalination",
+          "url": "https://usgs.gov/media/images/reverse-osmosis-desalination"
+        }
+      ]
+    },
+    {
+      "said": "Minerals go back in, because very pure water tastes flat and is hard on pipes.",
+      "sources": [
+        {
+          "name": "Omya, Why remineralization makes drinking water safe",
+          "url": "https://www.omya.com/en/omya-specialty-materials/industries/water-treatment/water-treatment-articles/why-remineralization-makes-drinking-water-safe"
+        },
+        {
+          "name": "World Health Organization, Safe Drinking-water from Desalination (2011)",
+          "url": "https://fr.ircwash.org/sites/default/files/WHO-2011-Safe.pdf"
+        }
+      ]
+    }
+  ]
+}

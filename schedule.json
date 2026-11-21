@@ -42,44 +42,39 @@
       "id": "s-1125-teaser",
       "kind": "story",
       "file": "stories/s-1125-teaser.mp4",
-      "publish_at": "2026-11-25T12:30:00+04:00",
-      "approved": false,
-      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
+      "publish_at": "2026-11-27T12:30:00+04:00",
+      "approved": true
     },
     {
       "id": "002-tap-water",
       "file": "002-tap-water.mp4",
-      "publish_at": "2026-11-25T20:00:00+04:00",
+      "publish_at": "2026-11-27T20:00:00+04:00",
       "thumb_offset_ms": 1100,
-      "caption": "Where does Dubai's tap water come from?\nThe sea. Plants either boil seawater and catch the steam, or squeeze it through a membrane that stops over 99% of the salt.\nMinerals go back in before it reaches your tap.\nDubai can make about 495 million (imperial) gallons a day.\n\nSources: UAE Government portal u.ae, \"Water\" ; DEWA, Annual Statistics Booklet 2025 ; Dubai Media Office, DEWA's Jebel Ali complex enters Guinness World Records (2022) ; DEWA, Hassyan Seawater Reverse Osmosis Project ; IEEE TechNav, \"Reverse osmosis\"\n\nGot a lesh? Comment it, we'll explain it.\n#LeshExplained #UAE #Dubai #Desalination #HowItWorks",
-      "approved": false,
+      "caption": "Where does Dubai's tap water come from?\nThe sea. The salt comes out in one of two ways: boil the water and catch the steam, or squeeze it through a membrane that stops over 99% of the salt.\nThen minerals go back in, so it tastes right and is kind to the pipes.\n\nSend this to the friend who only drinks bottled water.\n\nSources: UAE Government portal u.ae, IEEE TechNav, USGS.\nIllustrated explainer, not to scale.\n#TapWater #Dubai #UAE #HowItWorks #LeshExplained",
+      "approved": true,
       "cover": "002-tap-water-cover.jpg",
-      "duration_s": 55.78,
-      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
+      "duration_s": 40.39
     },
     {
       "id": "s-1125-new",
       "kind": "story",
       "file": "stories/s-1125-new.jpg",
-      "publish_at": "2026-11-25T20:05:00+04:00",
-      "approved": false,
-      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
+      "publish_at": "2026-11-27T20:05:00+04:00",
+      "approved": true
     },
     {
       "id": "s-1126-guess-q",
       "kind": "story",
       "file": "stories/s-1126-guess-q.jpg",
-      "publish_at": "2026-11-26T13:00:00+04:00",
-      "approved": false,
-      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
+      "publish_at": "2026-11-28T13:00:00+04:00",
+      "approved": true
     },
     {
       "id": "s-1126-guess-a",
       "kind": "story",
       "file": "stories/s-1126-guess-a.jpg",
-      "publish_at": "2026-11-26T13:01:00+04:00",
-      "approved": false,
-      "hold": "Legal check 21 Nov 2026: shows a vital site (desalination, Jebel Ali) during the regional conflict. Waiting for Saif."
+      "publish_at": "2026-11-28T13:01:00+04:00",
+      "approved": true
     },
     {
       "id": "s-1127-teaser",

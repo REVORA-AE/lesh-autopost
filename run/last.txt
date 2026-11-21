@@ -34,4 +34,4 @@ Traceback (most recent call last):
     info = call("GET", "/" + uid, {"fields": "id,username,followers_count,media_count"})
   File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 73, in call
     raise RuntimeError("%s %s -> %s %s" % (method, path, e.code, body[:600]))
-RuntimeError: GET /17841441425903061 -> 400 {"error":{"message":"API access blocked.","code":200,"type":"OAuthException","error_subcode":5258005,"fbtrace_id":"A79DxhGmLttQJTdlNteZh_H"}}
+RuntimeError: GET /17841441425903061 -> 400 {"error":{"message":"API access blocked.","code":200,"type":"OAuthException","error_subcode":5258005,"fbtrace_id":"AOf1V8_oqFFYkkQ3xlL-u9i"}}

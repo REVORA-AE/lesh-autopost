@@ -1,16 +1,12 @@
-{
-  "user_id": "17841441425903061",
-  "username": "leshexplained",
-  "account_type": "business portfolio token"
-}
-{
-  "data": [
-    {
-      "quota_usage": 0,
-      "config": {
-        "quota_total": 100,
-        "quota_duration": 86400
-      }
-    }
-  ]
-}
+06:55:35 account @leshexplained (business portfolio token)
+06:55:35 preparing s-1123-teaser for 2026-11-23T08:30:00+00:00
+06:55:37 container 18086379581380864 IN_PROGRESS In Progress: Media is still being processed.
+06:55:52 container 18086379581380864 IN_PROGRESS In Progress: Media is still being processed.
+06:56:08 container 18086379581380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+06:56:08 DRY RUN ok: s-1123-teaser is ready to publish (container 18086379581380864 will expire unused)
+06:56:08 preparing 001-metro for 2026-11-23T16:00:00+00:00
+06:56:10 container 18086379863380864 IN_PROGRESS In Progress: Media is still being processed.
+06:56:25 container 18086379863380864 IN_PROGRESS In Progress: Media is still being processed.
+06:56:41 container 18086379863380864 IN_PROGRESS In Progress: Media is still being processed.
+06:56:56 container 18086379863380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+06:56:56 DRY RUN ok: 001-metro is ready to publish (container 18086379863380864 will expire unused)

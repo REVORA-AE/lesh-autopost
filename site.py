@@ -63,8 +63,9 @@ def view(src, live, older, newer):
 def build(out, preview=False):
     sched = load("schedule.json", {"posts": []}); posts = sched["posts"] if isinstance(sched, dict) else sched
     posted = load("posted.json", {}); fixes = load("corrections.json", [])
+    shutil.rmtree(out, ignore_errors=True)   # start clean, so nothing stale is ever served
+    shutil.copytree(os.path.join(HERE, "site_src"), out)
     os.makedirs(os.path.join(out, "covers"), exist_ok=True)
-    shutil.copytree(os.path.join(HERE, "site_src"), out, dirs_exist_ok=True)
     eps, upcoming = [], []
     for p in posts:
         if p.get("kind") == "story": continue

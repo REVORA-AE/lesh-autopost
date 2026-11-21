@@ -4,13 +4,13 @@
       "id": "s-1123-teaser",
       "kind": "story",
       "file": "stories/s-1123-teaser.mp4",
-      "publish_at": "2026-11-23T12:30:00+04:00",
+      "publish_at": "2026-11-21T13:15:00+04:00",
       "approved": true
     },
     {
       "id": "001-metro",
       "file": "001-metro.mp4",
-      "publish_at": "2026-11-23T20:00:00+04:00",
+      "publish_at": "2026-11-21T20:00:00+04:00",
       "thumb_offset_ms": 1300,
       "caption": "Who's driving the Dubai Metro?\nNobody. The Dubai Metro is driverless: computers drive every train, and each one keeps a moving bubble of empty track around it.\nA control room watches the whole network day and night, and 99.7% of trips run on time.\n\nSend this to someone who still looks for the driver.\n\nSources: Gulf News, Guinness World Records, Dubai Media Office.\nIllustrated explainer, not to scale.\n#DubaiMetro #Dubai #UAE #HowItWorks #LeshExplained",
       "approved": true,
@@ -21,21 +21,21 @@
       "id": "s-1123-new",
       "kind": "story",
       "file": "stories/s-1123-new.jpg",
-      "publish_at": "2026-11-23T20:05:00+04:00",
+      "publish_at": "2026-11-21T20:05:00+04:00",
       "approved": true
     },
     {
       "id": "s-1124-guess-q",
       "kind": "story",
       "file": "stories/s-1124-guess-q.jpg",
-      "publish_at": "2026-11-24T13:00:00+04:00",
+      "publish_at": "2026-11-22T13:00:00+04:00",
       "approved": true
     },
     {
       "id": "s-1124-guess-a",
       "kind": "story",
       "file": "stories/s-1124-guess-a.jpg",
-      "publish_at": "2026-11-24T13:01:00+04:00",
+      "publish_at": "2026-11-22T13:01:00+04:00",
       "approved": true
     },
     {
@@ -85,13 +85,13 @@
       "id": "s-1127-teaser",
       "kind": "story",
       "file": "stories/s-1127-teaser.mp4",
-      "publish_at": "2026-11-27T12:30:00+04:00",
+      "publish_at": "2026-11-23T12:30:00+04:00",
       "approved": true
     },
     {
       "id": "003-palm",
       "file": "003-palm.mp4",
-      "publish_at": "2026-11-27T20:00:00+04:00",
+      "publish_at": "2026-11-23T20:00:00+04:00",
       "thumb_offset_ms": 1100,
       "caption": "What's holding up Palm Jumeirah?\nSand and rock. No concrete, no steel.\nAn 11 km rock crescent went in first, then ships sprayed about 94 million cubic metres of sand into place, guided by GPS. Then the sand was vibrated tight so it can't act like a liquid in a quake.\n\nGot a lesh? Comment it, we'll explain it.\n\nSources: Gulf News, Royal IHC, Arabian Business.\nIllustrated explainer, not to scale.\n#PalmJumeirah #Dubai #UAE #Engineering #LeshExplained",
       "approved": true,
@@ -102,35 +102,35 @@
       "id": "s-1127-new",
       "kind": "story",
       "file": "stories/s-1127-new.jpg",
-      "publish_at": "2026-11-27T20:05:00+04:00",
+      "publish_at": "2026-11-23T20:05:00+04:00",
       "approved": true
     },
     {
       "id": "s-1128-guess-q",
       "kind": "story",
       "file": "stories/s-1128-guess-q.jpg",
-      "publish_at": "2026-11-28T13:00:00+04:00",
+      "publish_at": "2026-11-24T13:00:00+04:00",
       "approved": true
     },
     {
       "id": "s-1128-guess-a",
       "kind": "story",
       "file": "stories/s-1128-guess-a.jpg",
-      "publish_at": "2026-11-28T13:01:00+04:00",
+      "publish_at": "2026-11-24T13:01:00+04:00",
       "approved": true
     },
     {
       "id": "s-1129-guess-q",
       "kind": "story",
       "file": "stories/s-1129-guess-q.jpg",
-      "publish_at": "2026-11-29T13:00:00+04:00",
+      "publish_at": "2026-11-25T13:00:00+04:00",
       "approved": true
     },
     {
       "id": "s-1129-guess-a",
       "kind": "story",
       "file": "stories/s-1129-guess-a.jpg",
-      "publish_at": "2026-11-29T13:01:00+04:00",
+      "publish_at": "2026-11-25T13:01:00+04:00",
       "approved": true
     }
   ]

@@ -1,11 +1,11 @@
-07:29:56 account @leshexplained (business portfolio token)
-07:29:56 preparing s-1123-teaser for 2026-11-23T08:30:00+00:00
-07:29:59 container 18086384921380864 IN_PROGRESS In Progress: Media is still being processed.
-07:30:15 container 18086384921380864 IN_PROGRESS In Progress: Media is still being processed.
-07:30:30 container 18086384921380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-07:30:30 DRY RUN ok: s-1123-teaser is ready to publish (container 18086384921380864 will expire unused)
-07:30:32 preparing 001-metro for 2026-11-23T16:00:00+00:00
-07:30:34 container 18086385143380864 IN_PROGRESS In Progress: Media is still being processed.
-07:30:50 container 18086385143380864 IN_PROGRESS In Progress: Media is still being processed.
-07:31:06 container 18086385143380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-07:31:06 DRY RUN ok: 001-metro is ready to publish (container 18086385143380864 will expire unused)
+08:40:31 account @leshexplained (business portfolio token)
+08:40:31 preparing s-1123-teaser for 2026-11-23T08:30:00+00:00
+08:40:33 container 18086396246380864 IN_PROGRESS In Progress: Media is still being processed.
+08:40:49 container 18086396246380864 IN_PROGRESS In Progress: Media is still being processed.
+08:41:04 container 18086396246380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+08:41:04 DRY RUN ok: s-1123-teaser is ready to publish (container 18086396246380864 will expire unused)
+08:41:05 preparing 001-metro for 2026-11-23T16:00:00+00:00
+08:41:07 container 18086396438380864 IN_PROGRESS In Progress: Media is still being processed.
+08:41:22 container 18086396438380864 IN_PROGRESS In Progress: Media is still being processed.
+08:41:38 container 18086396438380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+08:41:38 DRY RUN ok: 001-metro is ready to publish (container 18086396438380864 will expire unused)

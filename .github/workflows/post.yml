@@ -41,11 +41,15 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           set -o pipefail
           python3 poster.py ${{ steps.mode.outputs.mode }} 2>&1 | tee /tmp/last.txt
+      - name: Rebuild the site
+        if: always()
+        continue-on-error: true
+        run: python3 site.py
       - name: Save results
         if: always()
         run: |
           mkdir -p run && cp /tmp/last.txt run/last.txt 2>/dev/null || true
-          for p in posted.json stats comments replies.json review token.enc run/last.txt; do [ -e "$p" ] && git add -A "$p"; done
+          for p in posted.json stats comments replies.json review token.enc run/last.txt site; do [ -e "$p" ] && git add -A "$p"; done
           if ! git diff --cached --quiet; then
             git commit -m "autopost: ${{ steps.mode.outputs.mode }} $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase --quiet && git push --quiet

@@ -1,0 +1,108 @@
+{
+  "id": "001-metro",
+  "n": "001",
+  "title": "Who's driving the Dubai Metro?",
+  "colour": "sun",
+  "checked": "2026-11-20",
+  "facts": [
+    {
+      "said": "There is no driver on board. Computers run every train.",
+      "sources": [
+        {
+          "name": "Gulf News, Inside Dubai Metro's nerve centre",
+          "url": "https://gulfnews.com/uae/transport/inside-dubai-metros-nerve-centre-1.640237"
+        }
+      ]
+    },
+    {
+      "said": "Trains talk to the track all the time, and the system sets their speed and position.",
+      "sources": [
+        {
+          "name": "Gulf News, How technology powers Dubai's transport evolution",
+          "url": "https://gulfnews.com/technology/how-technology-powers-dubais-transport-evolution-1.500417056"
+        }
+      ]
+    },
+    {
+      "said": "Each train keeps a moving safe zone of empty track around it.",
+      "sources": [
+        {
+          "name": "Railway News, What is CBTC?",
+          "url": "https://railwaynews.net/?p=251018"
+        },
+        {
+          "name": "Wikipedia, Communications based train control",
+          "url": "https://en.wikipedia.org/wiki/Communications-based_train_control"
+        }
+      ]
+    },
+    {
+      "said": "Stations have glass doors along the platform edge.",
+      "sources": [
+        {
+          "name": "Wikipedia, Dubai Metro",
+          "url": "https://en.wikipedia.org/wiki/Dubai_Metro"
+        }
+      ]
+    },
+    {
+      "said": "A control centre watches the network day and night.",
+      "sources": [
+        {
+          "name": "Gulf News, Dubai Metro: How 9,000 cameras track 850,000 riders (2025)",
+          "url": "https://gulfnews.com/uae/dubai-metro-how-9000-cameras-track-850000-riders-101-trains-53-stations-1.500276324"
+        }
+      ]
+    },
+    {
+      "said": "The control centre is in Al Rashidiya, with about 20 staff per shift.",
+      "hold": true,
+      "sources": [
+        {
+          "name": "Gulf News, Dubai Metro: How 9,000 cameras track 850,000 riders (2025)",
+          "url": "https://gulfnews.com/uae/dubai-metro-how-9000-cameras-track-850000-riders-101-trains-53-stations-1.500276324"
+        },
+        {
+          "name": "The National (2025)"
+        }
+      ]
+    },
+    {
+      "said": "One button can suspend the entire service.",
+      "hold": true,
+      "sources": [
+        {
+          "name": "Khaleej Times, This is how Dubai Metro's driverless trains run like clockwork"
+        }
+      ]
+    },
+    {
+      "said": "99.7% of trips run on time.",
+      "sources": [
+        {
+          "name": "Gulf News, Dubai Metro: How 9,000 cameras track 850,000 riders (2025)",
+          "url": "https://gulfnews.com/uae/dubai-metro-how-9000-cameras-track-850000-riders-101-trains-53-stations-1.500276324"
+        }
+      ]
+    },
+    {
+      "said": "In 2011 the Red Line set the Guinness record for the longest driverless metro line: 52.1 km.",
+      "sources": [
+        {
+          "name": "Guinness World Records, Longest driverless metro line",
+          "url": "https://guinnessworldrecords.com/world-records/longest-driverless-metro-line"
+        }
+      ]
+    },
+    {
+      "said": "Over 750,000 riders on an average day.",
+      "sources": [
+        {
+          "name": "Dubai Media Office, Dubai Metro marks 15 years (8 Sep 2024)",
+          "url": "https://www.mediaoffice.ae/en/news/2024/september/08-09/dubai-metro-marks-15-years-of-transforming-urban-mass-transit"
+        }
+      ]
+    }
+  ],
+  "note": "The KM readout, the train number, the speed bars and the map in the reel are drawings, not data."
+}

@@ -1,0 +1,155 @@
+{
+  "id": "003-palm",
+  "n": "003",
+  "title": "What's holding up Palm Jumeirah?",
+  "colour": "gulf",
+  "checked": "2026-11-21",
+  "facts": [
+    {
+      "said": "The island is built only from sand and rock. No steel, no concrete.",
+      "sources": [
+        {
+          "name": "Royal IHC, Creating the Palm Islands",
+          "url": "https://www.royalihc.com/dredging/project-type/creating-palm-islands"
+        },
+        {
+          "name": "Gulf News, 20 years since construction began on Palm Jumeirah",
+          "url": "https://gulfnews.com/uae/year-of-the-50th/photos-20-years-since-construction-began-on-dubais-iconic-palm-jumeirah-1.1622987123842"
+        },
+        {
+          "name": "Property Finder, Palm Jumeirah facts",
+          "url": "https://www.propertyfinder.ae/blog/palm-jumeirah-facts/"
+        }
+      ]
+    },
+    {
+      "said": "The breakwater was built first.",
+      "sources": [
+        {
+          "name": "Higgins, Engineering Challenges of Dubai's Palm Jumeirah, Memorial University (2013)",
+          "url": "https://journals.library.mun.ca/index.php/prototype/article/view/399"
+        },
+        {
+          "name": "University of British Columbia, sand mining in Dubai case study",
+          "url": "https://cases.open.ubc.ca/w17t2con200-10/"
+        },
+        {
+          "name": "USC Illumin, The artificial natural world",
+          "url": "https://illumin.usc.edu/the-artificial-natural-world/"
+        }
+      ]
+    },
+    {
+      "said": "The crescent breakwater is 11 km long.",
+      "sources": [
+        {
+          "name": "Gulf News, Palm Jumeirah to leave an indelible impression",
+          "url": "https://gulfnews.com/business/property/palm-jumeirah-to-leave-an-indelible-impression-1.627251"
+        },
+        {
+          "name": "Interesting Engineering"
+        }
+      ]
+    },
+    {
+      "said": "Over 7 million tonnes of rock came from the Hajar Mountains.",
+      "sources": [
+        {
+          "name": "Gulf News, 20 years since construction began on Palm Jumeirah",
+          "url": "https://gulfnews.com/uae/year-of-the-50th/photos-20-years-since-construction-began-on-dubais-iconic-palm-jumeirah-1.1622987123842"
+        },
+        {
+          "name": "Gulf News, Palm Jumeirah to leave an indelible impression",
+          "url": "https://gulfnews.com/business/property/palm-jumeirah-to-leave-an-indelible-impression-1.627251"
+        }
+      ]
+    },
+    {
+      "said": "Each rock was placed by crane, signed off by a diver and given a GPS coordinate.",
+      "sources": [
+        {
+          "name": "Gulf News, Palm Jumeirah to leave an indelible impression",
+          "url": "https://gulfnews.com/business/property/palm-jumeirah-to-leave-an-indelible-impression-1.627251"
+        }
+      ]
+    },
+    {
+      "said": "Sand was dredged from the seabed and sprayed into place. The method is called rainbowing.",
+      "sources": [
+        {
+          "name": "Higgins, Engineering Challenges of Dubai's Palm Jumeirah, Memorial University (2013)",
+          "url": "https://journals.library.mun.ca/index.php/prototype/article/view/399"
+        },
+        {
+          "name": "Gulf News, Palm Jumeirah to leave an indelible impression",
+          "url": "https://gulfnews.com/business/property/palm-jumeirah-to-leave-an-indelible-impression-1.627251"
+        },
+        {
+          "name": "Dubizzle, How Dubai's artificial islands were made",
+          "url": "https://www.dubizzle.com/blog/property/dubai-artificial-islands-construction/"
+        }
+      ]
+    },
+    {
+      "said": "About 94 million cubic metres of sand.",
+      "sources": [
+        {
+          "name": "University of British Columbia, sand mining in Dubai case study",
+          "url": "https://cases.open.ubc.ca/w17t2con200-10/"
+        },
+        {
+          "name": "Property Finder, Palm Jumeirah facts",
+          "url": "https://www.propertyfinder.ae/blog/palm-jumeirah-facts/"
+        },
+        {
+          "name": "Dubizzle, How Dubai's artificial islands were made",
+          "url": "https://www.dubizzle.com/blog/property/dubai-artificial-islands-construction/"
+        }
+      ],
+      "note": "Sources differ here. Gulf News gives 95 million, and some give up to 110 to 120 million. We say about 94 million."
+    },
+    {
+      "said": "GPS guided the spraying.",
+      "sources": [
+        {
+          "name": "Higgins, Engineering Challenges of Dubai's Palm Jumeirah, Memorial University (2013)",
+          "url": "https://journals.library.mun.ca/index.php/prototype/article/view/399"
+        },
+        {
+          "name": "Dubizzle, How Dubai's artificial islands were made",
+          "url": "https://www.dubizzle.com/blog/property/dubai-artificial-islands-construction/"
+        }
+      ]
+    },
+    {
+      "said": "Loose wet sand can act like a liquid when shaken, so the sand was vibrated tight.",
+      "sources": [
+        {
+          "name": "Arabian Business, Sand compaction still underway on the Palm",
+          "url": "https://www.arabianbusiness.com/abnews/sand-compaction-still-underway-on-palm-62552"
+        },
+        {
+          "name": "USC Illumin, The artificial natural world",
+          "url": "https://illumin.usc.edu/the-artificial-natural-world/"
+        }
+      ]
+    },
+    {
+      "said": "Two 100 m gaps in the crescent let seawater circulate.",
+      "sources": [
+        {
+          "name": "USC Illumin, The artificial natural world",
+          "url": "https://illumin.usc.edu/the-artificial-natural-world/"
+        },
+        {
+          "name": "Higgins, Engineering Challenges of Dubai's Palm Jumeirah, Memorial University (2013)",
+          "url": "https://journals.library.mun.ca/index.php/prototype/article/view/399"
+        },
+        {
+          "name": "Property Finder, Palm Jumeirah facts",
+          "url": "https://www.propertyfinder.ae/blog/palm-jumeirah-facts/"
+        }
+      ]
+    }
+  ]
+}

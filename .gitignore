@@ -1,3 +1,4 @@
 site_build/node_modules/
+site_build/package.json
 preview_build/
 __pycache__/

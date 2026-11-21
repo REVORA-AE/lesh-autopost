@@ -25,13 +25,13 @@ Traceback (most recent call last):
   File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 354, in <module>
     main()
     ~~~~^^
-  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 339, in main
-    do_post()
-    ~~~~~~~^^
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 337, in main
+    do_post(dry=True)
+    ~~~~~~~^^^^^^^^^^
   File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 169, in do_post
     info = me()
   File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 104, in me
     info = call("GET", "/" + uid, {"fields": "id,username,followers_count,media_count"})
   File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 73, in call
     raise RuntimeError("%s %s -> %s %s" % (method, path, e.code, body[:600]))
-RuntimeError: GET /17841441425903061 -> 400 {"error":{"message":"API access blocked.","code":200,"type":"OAuthException","error_subcode":5258005,"fbtrace_id":"A9iVtaI1IMRw-G2XcQbPCk9"}}
+RuntimeError: GET /17841441425903061 -> 400 {"error":{"message":"API access blocked.","code":200,"type":"OAuthException","error_subcode":5258005,"fbtrace_id":"A79DxhGmLttQJTdlNteZh_H"}}

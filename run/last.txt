@@ -1,2 +1,37 @@
-13:19:41 stats saved for 0 reels and 0 stories
-13:19:41 comments: 0 new, 0 in the inbox, 0 open questions
+Traceback (most recent call last):
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 69, in call
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 354, in <module>
+    main()
+    ~~~~^^
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 339, in main
+    do_post()
+    ~~~~~~~^^
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 169, in do_post
+    info = me()
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 104, in me
+    info = call("GET", "/" + uid, {"fields": "id,username,followers_count,media_count"})
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 73, in call
+    raise RuntimeError("%s %s -> %s %s" % (method, path, e.code, body[:600]))
+RuntimeError: GET /17841441425903061 -> 400 {"error":{"message":"API access blocked.","code":200,"type":"OAuthException","error_subcode":5258005,"fbtrace_id":"ANBYvydM6Bh88azzy7T8yWq"}}

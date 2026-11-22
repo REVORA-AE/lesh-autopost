@@ -180,14 +180,16 @@ def do_post(dry=False):
         when = parse_time(post["publish_at"])
         if not dry and now() < when - lead:
             continue
-        if not dry and now() > when + dt.timedelta(hours=12):
-            log("SKIP", post["id"], "is more than 12 hours late; it needs a new time")
-            continue
+        late = not dry and now() > when + dt.timedelta(hours=12)
+        # Look for the reel on the account first, even when it is late: a reel posted by hand must be recorded, never posted again.
         live = already_live(uid, post) if post.get("kind") != "story" else None
         if live and not dry:
             log("already on Instagram:", post["id"], live.get("permalink"))
             posted[post["id"]] = {"media_id": live["id"], "permalink": live.get("permalink"), "published_at": live.get("timestamp"), "note": "found live"}
             changed = True
+            continue
+        if late:
+            log("SKIP", post["id"], "is more than 12 hours late; it needs a new time")
             continue
         log("preparing", post["id"], "for", when.isoformat())
         cid = container(uid, post)

@@ -1,16 +1,5 @@
-{
-  "user_id": "17841441425903061",
-  "username": "leshexplained",
-  "account_type": "business portfolio token"
-}
-{
-  "data": [
-    {
-      "quota_usage": 0,
-      "config": {
-        "quota_total": 100,
-        "quota_duration": 86400
-      }
-    }
-  ]
-}
+21:07:52 account @leshexplained (business portfolio token)
+21:07:53 already on Instagram: 001-metro https://www.instagram.com/reel/DgC2T10vLwU/
+21:07:53 SKIP s-1123-new is more than 12 hours late; it needs a new time
+21:07:53 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+21:07:53 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time

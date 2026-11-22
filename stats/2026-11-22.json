@@ -1,0 +1,8 @@
+{
+  "taken_at": "2026-11-22T13:19:39.737001+00:00",
+  "reels": {},
+  "stories": {},
+  "account": {
+    "error": "GET /17841441425903061 -> 400 {\"error\":{\"message\":\"API access blocked.\",\"code\":200,\"type\":\"OAuthException\",\"error_subcode\":5258005,\"fbtrace_id\":\"AkQoR5WA9b-JQP4A5iY_7B1\"}}"
+  }
+}

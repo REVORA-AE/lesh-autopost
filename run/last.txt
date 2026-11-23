@@ -1,21 +1,16 @@
-14:27:26 account @leshexplained (business portfolio token)
-14:27:26 SKIP s-1123-new is more than 12 hours late; it needs a new time
-14:27:26 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-14:27:26 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
-14:27:27 preparing 003-palm for 2026-11-23T16:00:00+00:00
-14:27:29 container 18086985197380864 IN_PROGRESS In Progress: Media is still being processed.
-14:27:45 container 18086985197380864 IN_PROGRESS In Progress: Media is still being processed.
-14:28:01 container 18086985197380864 ERROR Error: Media upload has failed with error code 2207077
-Traceback (most recent call last):
-  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 356, in <module>
-    main()
-    ~~~~^^
-  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 341, in main
-    do_post()
-    ~~~~~~~^^
-  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 196, in do_post
-    wait_ready(cid)
-    ~~~~~~~~~~^^^^^
-  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 146, in wait_ready
-    raise RuntimeError("container %s failed: %s" % (cid, st))
-RuntimeError: container 18086985197380864 failed: {'id': '18086985197380864', 'status': 'Error: Media upload has failed with error code 2207077', 'status_code': 'ERROR'}
+15:37:08 account @leshexplained (business portfolio token)
+15:37:08 SKIP s-1123-new is more than 12 hours late; it needs a new time
+15:37:08 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+15:37:08 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+15:37:09 preparing 003-palm for 2026-11-23T16:00:00+00:00
+15:37:11 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
+15:37:26 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
+15:37:42 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
+15:37:57 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
+15:38:13 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
+15:38:28 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
+15:38:44 container 18087002648380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+16:00:13 PUBLISHED 003-palm https://www.instagram.com/reel/DgFuDbkgh-S/
+16:00:13 preparing s-1127-new for 2026-11-23T16:05:00+00:00
+16:00:18 container 18087010628380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+16:05:05 PUBLISHED s-1127-new https://www.instagram.com/stories/leshexplained/4036846421713856693

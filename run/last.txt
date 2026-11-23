@@ -1,9 +1,21 @@
-08:06:55 account @leshexplained (business portfolio token)
-08:06:55 SKIP s-1123-new is more than 12 hours late; it needs a new time
-08:06:55 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-08:06:55 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
-08:06:55 preparing s-1127-teaser for 2026-11-23T08:30:00+00:00
-08:06:57 container 18086919374380864 IN_PROGRESS In Progress: Media is still being processed.
-08:07:13 container 18086919374380864 IN_PROGRESS In Progress: Media is still being processed.
-08:07:28 container 18086919374380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-08:30:08 PUBLISHED s-1127-teaser https://www.instagram.com/stories/leshexplained/4036608215111226942
+14:27:26 account @leshexplained (business portfolio token)
+14:27:26 SKIP s-1123-new is more than 12 hours late; it needs a new time
+14:27:26 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+14:27:26 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+14:27:27 preparing 003-palm for 2026-11-23T16:00:00+00:00
+14:27:29 container 18086985197380864 IN_PROGRESS In Progress: Media is still being processed.
+14:27:45 container 18086985197380864 IN_PROGRESS In Progress: Media is still being processed.
+14:28:01 container 18086985197380864 ERROR Error: Media upload has failed with error code 2207077
+Traceback (most recent call last):
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 356, in <module>
+    main()
+    ~~~~^^
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 341, in main
+    do_post()
+    ~~~~~~~^^
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 196, in do_post
+    wait_ready(cid)
+    ~~~~~~~~~~^^^^^
+  File "/home/runner/work/lesh-autopost/lesh-autopost/poster.py", line 146, in wait_ready
+    raise RuntimeError("container %s failed: %s" % (cid, st))
+RuntimeError: container 18086985197380864 failed: {'id': '18086985197380864', 'status': 'Error: Media upload has failed with error code 2207077', 'status_code': 'ERROR'}

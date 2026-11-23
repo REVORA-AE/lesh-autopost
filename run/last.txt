@@ -1,2 +1,9 @@
-06:15:46 stats saved for 1 reels and 0 stories
-06:15:46 comments: 0 new, 0 in the inbox, 0 open questions
+08:06:55 account @leshexplained (business portfolio token)
+08:06:55 SKIP s-1123-new is more than 12 hours late; it needs a new time
+08:06:55 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+08:06:55 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+08:06:55 preparing s-1127-teaser for 2026-11-23T08:30:00+00:00
+08:06:57 container 18086919374380864 IN_PROGRESS In Progress: Media is still being processed.
+08:07:13 container 18086919374380864 IN_PROGRESS In Progress: Media is still being processed.
+08:07:28 container 18086919374380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+08:30:08 PUBLISHED s-1127-teaser https://www.instagram.com/stories/leshexplained/4036608215111226942

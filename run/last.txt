@@ -1,16 +1,1 @@
-15:37:08 account @leshexplained (business portfolio token)
-15:37:08 SKIP s-1123-new is more than 12 hours late; it needs a new time
-15:37:08 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-15:37:08 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
-15:37:09 preparing 003-palm for 2026-11-23T16:00:00+00:00
-15:37:11 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
-15:37:26 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
-15:37:42 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
-15:37:57 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
-15:38:13 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
-15:38:28 container 18087002648380864 IN_PROGRESS In Progress: Media is still being processed.
-15:38:44 container 18087002648380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-16:00:13 PUBLISHED 003-palm https://www.instagram.com/reel/DgFuDbkgh-S/
-16:00:13 preparing s-1127-new for 2026-11-23T16:05:00+00:00
-16:00:18 container 18087010628380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-16:05:05 PUBLISHED s-1127-new https://www.instagram.com/stories/leshexplained/4036846421713856693
+16:30:16 business portfolio token never expires; nothing to refresh

@@ -36,5 +36,21 @@
     "trial": null,
     "topic": "s-1127-new",
     "variant": null
+  },
+  "s-1128-guess-q": {
+    "media_id": "17888913444625073",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4037332834729090112",
+    "published_at": "2026-11-24T09:00:02+0000",
+    "trial": null,
+    "topic": "s-1128-guess-q",
+    "variant": null
+  },
+  "s-1128-guess-a": {
+    "media_id": "17962201560015374",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4037359730620986008",
+    "published_at": "2026-11-24T09:01:01+0000",
+    "trial": null,
+    "topic": "s-1128-guess-a",
+    "variant": null
   }
 }

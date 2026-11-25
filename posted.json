@@ -52,5 +52,29 @@
     "trial": null,
     "topic": "s-1128-guess-a",
     "variant": null
+  },
+  "s-004-teaser": {
+    "media_id": "17917373394537204",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4038125050434742302",
+    "published_at": "2026-11-25T10:21:12+0000",
+    "trial": null,
+    "topic": "s-004-teaser",
+    "variant": null
+  },
+  "s-1129-guess-q": {
+    "media_id": "17947523301364260",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4038125380103564216",
+    "published_at": "2026-11-25T10:21:24+0000",
+    "trial": null,
+    "topic": "s-1129-guess-q",
+    "variant": null
+  },
+  "s-1129-guess-a": {
+    "media_id": "18108637139131700",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4038125463066980808",
+    "published_at": "2026-11-25T10:21:34+0000",
+    "trial": null,
+    "topic": "s-1129-guess-a",
+    "variant": null
   }
 }

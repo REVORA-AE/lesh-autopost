@@ -1,10 +1,10 @@
 {
   "id": "004-number-plates",
   "n": "004",
-  "title": "Why pay 55 million dirhams for a number plate?",
+  "title": "Can a number plate cost more than the car?",
   "colour": "rose",
-  "checked": "2026-11-21",
-  "note": "The plates in the reel are drawings, not copies of real plate designs. The counts per code letter are plain arithmetic: 9 single digit numbers, 90,000 five digit numbers.",
+  "checked": "2026-11-24",
+  "note": "Argument 01. Akeed's line (a plate can't cost more than the car) is the myth being corrected. The car, the plates and the rosette in the reel are toy models, not copies of real designs; 12345, 8642 and 371 are made up numbers.",
   "facts": [
     {
       "said": "Plate P 7 sold for AED 55 million at an auction in Dubai on 8 April 2023.",
@@ -20,7 +20,16 @@
       ]
     },
     {
-      "said": "Guinness World Records lists it as the most expensive number plate.",
+      "said": "P 7 has one letter and one digit. The fewer the digits, the rarer and more expensive the plate.",
+      "sources": [
+        {
+          "name": "Khaleej Times, Dh55 million for a car number plate? Why they cost so much",
+          "url": "https://www.khaleejtimes.com/uae/uae-car-number-plate-prices"
+        }
+      ]
+    },
+    {
+      "said": "Guinness World Records lists it as the most expensive number plate ever sold.",
       "sources": [
         {
           "name": "Guinness World Records, Dubai driver drops nearly $15 million on most expensive license plate ever (May 2023)",
@@ -29,48 +38,7 @@
       ]
     },
     {
-      "said": "A Dubai plate can have up to five digits. P 7 has one.",
-      "sources": [
-        {
-          "name": "RTA, 90 distinctive plate numbers at open auction (Dec 2025)",
-          "url": "https://www.rta.ae/wps/portal/rta/ae/home/news-and-media/all-news/NewsDetails/90-distinctive-plate-numbers-at-open-auction-on-27th-december-2025"
-        }
-      ]
-    },
-    {
-      "said": "The fewer the digits, the rarer and more expensive the plate.",
-      "sources": [
-        {
-          "name": "Khaleej Times, Dh55 million for a car number plate? Why they cost so much",
-          "url": "https://www.khaleejtimes.com/uae/uae-car-number-plate-prices"
-        }
-      ],
-      "note": "The row counts in the picture are arithmetic, not RTA figures."
-    },
-    {
-      "said": "The bidding opened at AED 15 million and passed 30 million within seconds.",
-      "sources": [
-        {
-          "name": "Khaleej Times, New record set as car number plate P7 sells for Dh55 million (8 Apr 2023)",
-          "url": "https://www.khaleejtimes.com/dubai-new-world-record-set-as-car-number-plate-p7-sells-for-dh55-million-at-auction"
-        }
-      ]
-    },
-    {
-      "said": "The record it beat: plate 1 in Abu Dhabi, AED 52.2 million, 2008.",
-      "sources": [
-        {
-          "name": "CNN via Newshub, World's most expensive licence plate sells for US$15 million (Apr 2023)",
-          "url": "https://newshub.co.nz/home/lifestyle/2023/04/world-s-most-expensive-licence-plate-sells-for-us-15-million.html"
-        },
-        {
-          "name": "Khaleej Times, How UAE set a world record to feed the hungry (Apr 2023)",
-          "url": "https://khaleejtimes.com/uae/dh55-million-car-plate-dh2-million-phone-number-how-uae-set-a-world-record-to-feed-the-hungry"
-        }
-      ]
-    },
-    {
-      "said": "All the proceeds went to a food aid fund, the 1 Billion Meals Endowment.",
+      "said": "It was a charity auction. All the money went to a food aid fund, the 1 Billion Meals Endowment.",
       "sources": [
         {
           "name": "Khaleej Times, How UAE set a world record to feed the hungry (Apr 2023)",

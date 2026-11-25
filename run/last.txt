@@ -1,18 +1,13 @@
-10:19:47 account @leshexplained (business portfolio token)
-10:19:47 SKIP s-1123-new is more than 12 hours late; it needs a new time
-10:19:47 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-10:19:47 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
-10:19:47 preparing s-004-teaser for 2026-11-25T08:30:00+00:00
-10:19:49 container 18087481205380864 IN_PROGRESS In Progress: Media is still being processed.
-10:20:05 container 18087481205380864 IN_PROGRESS In Progress: Media is still being processed.
-10:20:20 container 18087481205380864 IN_PROGRESS In Progress: Media is still being processed.
-10:20:36 container 18087481205380864 IN_PROGRESS In Progress: Media is still being processed.
-10:20:52 container 18087481205380864 IN_PROGRESS In Progress: Media is still being processed.
-10:21:07 container 18087481205380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-10:21:17 PUBLISHED s-004-teaser https://www.instagram.com/stories/leshexplained/4038125050434742302
-10:21:17 preparing s-1129-guess-q for 2026-11-25T09:00:00+00:00
-10:21:22 container 18087481382380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-10:21:27 PUBLISHED s-1129-guess-q https://www.instagram.com/stories/leshexplained/4038125380103564216
-10:21:27 preparing s-1129-guess-a for 2026-11-25T09:01:00+00:00
-10:21:32 container 18087481463380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-10:21:38 PUBLISHED s-1129-guess-a https://www.instagram.com/stories/leshexplained/4038125463066980808
+14:11:25 account @leshexplained (business portfolio token)
+14:11:25 SKIP s-1123-new is more than 12 hours late; it needs a new time
+14:11:25 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+14:11:25 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+14:11:25 preparing 004-number-plates for 2026-11-25T16:00:00+00:00
+14:11:28 container 18087529070380864 IN_PROGRESS In Progress: Media is still being processed.
+14:11:44 container 18087529070380864 IN_PROGRESS In Progress: Media is still being processed.
+14:11:59 container 18087529070380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+16:00:14 PUBLISHED 004-number-plates https://www.instagram.com/reel/DgKtwriBcpS/
+16:00:14 preparing s-004-new for 2026-11-25T16:05:00+00:00
+16:00:19 container 18087554396380864 IN_PROGRESS In Progress: Media is still being processed.
+16:00:34 container 18087554396380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+16:05:05 PUBLISHED s-004-new https://www.instagram.com/stories/leshexplained/4038295982554566788

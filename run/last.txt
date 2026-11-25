@@ -1,4 +1,10 @@
-23:39:58 account @leshexplained (business portfolio token)
-23:39:58 SKIP s-1123-new is more than 12 hours late; it needs a new time
-23:39:58 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-23:39:58 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+04:10:35 account @leshexplained (business portfolio token)
+04:10:35 preparing s-1123-new for 2026-11-21T16:05:00+00:00
+04:10:38 container 18087422117380864 IN_PROGRESS In Progress: Media is still being processed.
+04:10:54 container 18087422117380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+04:10:54 DRY RUN ok: s-1123-new is ready to publish (container 18087422117380864 will expire unused)
+04:10:54 preparing 004-number-plates for 2026-11-25T16:00:00+00:00
+04:10:56 container 18087422183380864 IN_PROGRESS In Progress: Media is still being processed.
+04:11:11 container 18087422183380864 IN_PROGRESS In Progress: Media is still being processed.
+04:11:26 container 18087422183380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+04:11:26 DRY RUN ok: 004-number-plates is ready to publish (container 18087422183380864 will expire unused)

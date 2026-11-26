@@ -1,2 +1,4 @@
-15:11:52 stats saved for 3 reels and 0 stories
-15:11:54 comments: 0 new, 0 in the inbox, 0 open questions
+15:36:02 account @leshexplained (business portfolio token)
+15:36:02 SKIP s-1123-new is more than 12 hours late; it needs a new time
+15:36:02 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+15:36:02 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time

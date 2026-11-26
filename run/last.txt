@@ -1,10 +1,4 @@
-08:06:27 account @leshexplained (business portfolio token)
-08:06:27 SKIP s-1123-new is more than 12 hours late; it needs a new time
-08:06:27 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-08:06:27 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
-08:06:27 preparing s-004-guess-q for 2026-11-26T09:00:00+00:00
-08:06:32 container 18087704654380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-09:00:10 PUBLISHED s-004-guess-q https://www.instagram.com/stories/leshexplained/4038782292030699640
-09:00:10 preparing s-004-guess-a for 2026-11-26T09:01:00+00:00
-09:00:15 container 18087714116380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-09:01:06 PUBLISHED s-004-guess-a https://www.instagram.com/stories/leshexplained/4038809328915661124
+13:48:09 account @leshexplained (business portfolio token)
+13:48:09 SKIP s-1123-new is more than 12 hours late; it needs a new time
+13:48:09 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+13:48:09 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time

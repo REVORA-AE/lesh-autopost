@@ -92,5 +92,21 @@
     "trial": null,
     "topic": "s-004-new",
     "variant": null
+  },
+  "s-004-guess-q": {
+    "media_id": "18120535321804252",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4038782292030699640",
+    "published_at": "2026-11-26T09:00:04+0000",
+    "trial": null,
+    "topic": "s-004-guess-q",
+    "variant": null
+  },
+  "s-004-guess-a": {
+    "media_id": "17892977355468503",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4038809328915661124",
+    "published_at": "2026-11-26T09:01:02+0000",
+    "trial": null,
+    "topic": "s-004-guess-a",
+    "variant": null
   }
 }

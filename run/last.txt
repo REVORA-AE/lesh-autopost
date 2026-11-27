@@ -1,3 +1,3 @@
-21:17:01 insights: first error: GET /17967324207249173/insights -> 400 {"error":{"message":"(#100) Tried accessing nonexisting field (insights)","type":"OAuthException","code":100,"fbtrace_id":"AG7CELKPICFIASK5_UUlXyn"}}
-21:17:29 stats saved for 4 reels and 0 stories
-21:17:31 comments: 0 new, 0 in the inbox, 0 open questions
+21:18:23 insights: first error: GET /17967324207249173/insights -> 400 {"error":{"message":"(#100) Tried accessing nonexisting field (insights)","type":"OAuthException","code":100,"fbtrace_id":"AZhjubxeXwIPS3G9ZDpc3Ti"}}
+21:19:03 stats saved for 4 reels and 0 stories
+21:19:05 comments: 0 new, 0 in the inbox, 0 open questions

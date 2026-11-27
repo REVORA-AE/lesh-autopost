@@ -189,6 +189,19 @@
       "file": "stories/s-005-new.jpg",
       "publish_at": "2026-11-28T20:05:00+04:00",
       "approved": true
+    },
+    {
+      "id": "004t-number-plates-2d",
+      "file": "004t-number-plates-2d.mp4",
+      "publish_at": "2026-12-01T20:00:00+04:00",
+      "thumb_offset_ms": 2600,
+      "caption": "Why pay 55 million dirhams for a number plate?\nBecause it has one digit. A Dubai plate can have up to five, so a single digit plate is as rare as plates get.\nIn 2023 plate P 7 sold for AED 55 million at a charity auction in Dubai, a Guinness World Records title. All of it went to a food aid fund.\n\nSend this to the friend who reads every plate in traffic.\n\nSources: Guinness World Records, Khaleej Times, RTA.\nIllustrated explainer, not to scale.\n#NumberPlates #Dubai #UAE #Cars #LeshExplained",
+      "approved": true,
+      "cover": "004t-number-plates-2d-cover.jpg",
+      "duration_s": 43.75,
+      "trial": "SS_PERFORMANCE",
+      "topic": "004-number-plates",
+      "variant": "2d trial"
     }
   ]
 }

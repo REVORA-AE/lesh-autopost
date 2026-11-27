@@ -1,9 +1,14 @@
-08:06:21 account @leshexplained (business portfolio token)
-08:06:21 SKIP s-1123-new is more than 12 hours late; it needs a new time
-08:06:21 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-08:06:21 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
-08:06:21 preparing s-1125-teaser for 2026-11-27T08:30:00+00:00
-08:06:23 container 18087971555380864 IN_PROGRESS In Progress: Media is still being processed.
-08:06:38 container 18087971555380864 IN_PROGRESS In Progress: Media is still being processed.
-08:06:54 container 18087971555380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-08:30:10 PUBLISHED s-1125-teaser https://www.instagram.com/stories/leshexplained/4039507034711021415
+13:44:27 account @leshexplained (business portfolio token)
+13:44:27 SKIP s-1123-new is more than 12 hours late; it needs a new time
+13:44:27 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+13:44:27 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+13:44:28 preparing 002-tap-water for 2026-11-27T16:00:00+00:00
+13:44:32 container 18088042010380864 IN_PROGRESS In Progress: Media is still being processed.
+13:44:47 container 18088042010380864 IN_PROGRESS In Progress: Media is still being processed.
+13:45:03 container 18088042010380864 IN_PROGRESS In Progress: Media is still being processed.
+13:45:18 container 18088042010380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+16:00:09 PUBLISHED 002-tap-water https://www.instagram.com/reel/DgP0SYVOzbR/
+16:00:09 preparing s-1125-new for 2026-11-27T16:05:00+00:00
+16:00:14 container 18088078547380864 IN_PROGRESS In Progress: Media is still being processed.
+16:00:29 container 18088078547380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+16:05:05 PUBLISHED s-1125-new https://www.instagram.com/stories/leshexplained/4039745488492013159

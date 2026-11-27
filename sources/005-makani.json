@@ -1,0 +1,93 @@
+{
+  "id": "005-makani",
+  "n": "005",
+  "title": "Why do buildings in Dubai have a 10 digit number?",
+  "colour": "lime",
+  "checked": "2026-11-27",
+  "note": "Every number in the reel is made up (12345 67890 and the two on the building), and the square code on the plaque is a pattern, not a readable code. The plaque, building, map and vehicles are generic drawings.",
+  "facts": [
+    {
+      "said": "Buildings carry a 10 digit number on a plaque at the entrance.",
+      "sources": [
+        {
+          "name": "Gulf News, Makani number: what is it and why do you need it?",
+          "url": "https://gulfnews.com/living-in-uae/housing/makani-number-what-is-it-and-why-do-you-need-it-1.1606302505909"
+        },
+        {
+          "name": "Bayut, Makani number in Dubai",
+          "url": "https://www.bayut.com/mybayut/heres-why-you-should-know-your-makani-number/"
+        }
+      ]
+    },
+    {
+      "said": "It is called Makani, which means \"my location\" in Arabic.",
+      "sources": [
+        {
+          "name": "Gulf News, Makani number: what is it and why do you need it?",
+          "url": "https://gulfnews.com/living-in-uae/housing/makani-number-what-is-it-and-why-do-you-need-it-1.1606302505909"
+        }
+      ]
+    },
+    {
+      "said": "The number comes from a geographic coordinate standard and finds the entrance to within about one metre.",
+      "sources": [
+        {
+          "name": "Gulf News, Makani number: what is it and why do you need it?",
+          "url": "https://gulfnews.com/living-in-uae/housing/makani-number-what-is-it-and-why-do-you-need-it-1.1606302505909"
+        },
+        {
+          "name": "The National, New geographic address system launched in Dubai",
+          "url": "https://www.thenationalnews.com/uae/new-geographic-address-system-launched-in-dubai-1.639119"
+        }
+      ]
+    },
+    {
+      "said": "Big buildings get a different number for each entrance.",
+      "sources": [
+        {
+          "name": "Emirates 24/7 (WAM), Dubai's e address system begins in October (Aug 2015)",
+          "url": "https://www.emirates247.com/news/emirates/dubai-s-e-address-system-begins-in-october-2015-08-25-1.601364"
+        },
+        {
+          "name": "Dubai Municipality, Makani public web service access (PDF)",
+          "url": "https://www.dm.gov.ae/wp-content/uploads/2017/05/Makani-Public-Web-Service-Access.pdf"
+        }
+      ]
+    },
+    {
+      "said": "You can share the number instead of describing the way.",
+      "sources": [
+        {
+          "name": "Gulf News, Makani to cut response time in Dubai emergencies",
+          "url": "https://gulfnews.com/uae/makani-to-cut-response-time-in-dubai-emergencies-1.1486258"
+        }
+      ]
+    },
+    {
+      "said": "Taxis can use it, and it helps emergency teams reach you faster.",
+      "sources": [
+        {
+          "name": "Gulf News, Makani to be usable on Google and HERE maps",
+          "url": "https://gulfnews.com/uae/transport/makani-to-be-usable-on-google-and-here-maps-1.1494098"
+        },
+        {
+          "name": "Gulf News, Makani to cut response time in Dubai emergencies",
+          "url": "https://gulfnews.com/uae/makani-to-cut-response-time-in-dubai-emergencies-1.1486258"
+        }
+      ]
+    },
+    {
+      "said": "Ajman, Fujairah, Ras Al Khaimah and Umm Al Quwain use it too.",
+      "sources": [
+        {
+          "name": "Dubai Municipality, GeoDubai smart solutions: Makani",
+          "url": "https://geodubai.dm.gov.ae/en/Pages/SmartSolutions.aspx?tid=1"
+        },
+        {
+          "name": "Emirates 24/7, Makani explained",
+          "url": "https://www.emirates247.com/uae-guide/makani-explained-how-dubais-smart-address-system-helps-you-find-any-location/3634"
+        }
+      ]
+    }
+  ]
+}

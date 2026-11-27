@@ -1,4 +1,10 @@
-16:05:24 account @leshexplained (business portfolio token)
-16:05:24 SKIP s-1123-new is more than 12 hours late; it needs a new time
-16:05:24 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-16:05:24 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+19:22:51 account @leshexplained (business portfolio token)
+19:22:51 preparing s-1123-new for 2026-11-21T16:05:00+00:00
+19:22:55 container 18088115846380864 IN_PROGRESS In Progress: Media is still being processed.
+19:23:11 container 18088115846380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+19:23:11 DRY RUN ok: s-1123-new is ready to publish (container 18088115846380864 will expire unused)
+19:23:11 preparing 005-makani for 2026-11-28T16:00:00+00:00
+19:23:13 container 18088115894380864 IN_PROGRESS In Progress: Media is still being processed.
+19:23:29 container 18088115894380864 IN_PROGRESS In Progress: Media is still being processed.
+19:23:44 container 18088115894380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+19:23:44 DRY RUN ok: 005-makani is ready to publish (container 18088115894380864 will expire unused)

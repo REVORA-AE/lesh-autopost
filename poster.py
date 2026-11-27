@@ -225,6 +225,7 @@ def do_insights():
     sched = {p["id"]: p for p in load("schedule.json", {"posts": []})["posts"]}
     day = now().strftime("%Y-%m-%d")
     out = {"taken_at": now().isoformat(), "reels": {}, "stories": {}}
+    warned = False
     for pid, p in posted.items():
         story = sched.get(pid, {}).get("kind") == "story"
         row = {"media_id": p["media_id"], "permalink": p.get("permalink")}
@@ -232,8 +233,10 @@ def do_insights():
             try:
                 r = call("GET", "/%s/insights" % p["media_id"], {"metric": m})
                 row[m] = r["data"][0]["values"][0]["value"] if "values" in r["data"][0] else r["data"][0].get("total_value", {}).get("value")
-            except Exception:  # a metric can be unavailable for a fresh reel, and story numbers vanish after 24 hours
+            except Exception as ex:  # a metric can be unavailable for a fresh reel, and story numbers vanish after 24 hours
                 row[m] = None
+                if not warned:   # say why once per run (the message holds the API's answer, never the token)
+                    log("insights: first error:", str(ex)[:400]); warned = True
         if story:
             if any(row.get(m) is not None for m in STORY_METRICS):
                 out["stories"][pid] = row

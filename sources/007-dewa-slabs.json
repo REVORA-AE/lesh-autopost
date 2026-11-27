@@ -1,0 +1,71 @@
+{
+  "id": "007-dewa-slabs",
+  "n": "007",
+  "title": "Why does your DEWA bill jump in summer?",
+  "colour": "sky",
+  "checked": "2026-11-28",
+  "note": "Homes of UAE nationals have their own lower rates; the reel shows the standard home tariff. The AC, bill and display are generic drawings.",
+  "facts": [
+    {
+      "said": "DEWA charges electricity in four slabs, marked G, Y, O and R (green, yellow, orange, red) on its tariff table.",
+      "sources": [
+        {
+          "name": "DEWA, Slab tariff",
+          "url": "https://dewa.gov.ae/en/consumer/billing/slab-tariff"
+        }
+      ]
+    },
+    {
+      "said": "Standard home tariff: 0 to 2,000 kWh a month 23 fils, 2,001 to 4,000 28 fils, 4,001 to 6,000 32 fils, above 6,000 38 fils.",
+      "sources": [
+        {
+          "name": "DEWA, Slab tariff",
+          "url": "https://dewa.gov.ae/en/consumer/billing/slab-tariff"
+        },
+        {
+          "name": "Dubai Executive Council Resolution No. 16 of 2011",
+          "url": "https://dlp.dubai.gov.ae/Legislation%20Reference/2011/Executive%20Council%20Resolution%20No.%20(16)%20of%202011.html"
+        }
+      ]
+    },
+    {
+      "said": "In summer, air conditioning takes about 60% of the power at peak times (DEWA).",
+      "sources": [
+        {
+          "name": "DEWA, Energy saving campaign for summer (1 Jul 2009)",
+          "url": "https://www.dewa.gov.ae/en/about-us/media-publications/latest-news/2009/06/dubai-electricity-and-water-authority-launches-energy-saving-campaign-for-summer"
+        },
+        {
+          "name": "DEWA, DEWA recommends rational consumption during summer (22 Jul 2013)",
+          "url": "https://www.dewa.gov.ae/en/about-us/media-publications/latest-news/2013/07/dewa-recommends-rational-consumption-during-summer"
+        },
+        {
+          "name": "Gulf News, Dewa launches annual peak load reduction campaign",
+          "url": "https://gulfnews.com/uae/environment/dewa-launches-annual-peak-load-reduction-campaign-1.1876354"
+        }
+      ]
+    },
+    {
+      "said": "A fuel surcharge that changes with fuel prices, and 5% VAT, come on top.",
+      "sources": [
+        {
+          "name": "DEWA, Slab tariff",
+          "url": "https://dewa.gov.ae/en/consumer/billing/slab-tariff"
+        },
+        {
+          "name": "Chambers, Power Generation, Transmission and Distribution 2026 (UAE)",
+          "url": "https://gpg-pdf.chambers.com/power-generation-transmission-and-distribution-2026/361/"
+        }
+      ]
+    },
+    {
+      "said": "DEWA's tip: set the air conditioning to 24 degrees.",
+      "sources": [
+        {
+          "name": "DEWA, Peak load",
+          "url": "https://www.dewa.gov.ae/en/about-us/sustainability/lets-make-this-summer-green/peak-load"
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,2 @@
-21:19:43 insights: first error: GET /17982071295136618/insights -> 400 {"error":{"message":"(#10) Application does not have permission for this action","code":10,"type":"OAuthException","fbtrace_id":"Ai9zZ84MMcDAgubX7riXRob"}}
-21:20:19 stats saved for 4 reels and 0 stories
-21:20:21 comments: 0 new, 0 in the inbox, 0 open questions
+22:01:04 stats saved for 4 reels and 0 stories
+22:01:04 comments: 0 new, 0 in the inbox, 0 open questions

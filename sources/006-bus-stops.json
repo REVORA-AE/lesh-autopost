@@ -1,0 +1,88 @@
+{
+  "id": "006-bus-stops",
+  "n": "006",
+  "title": "Why do some Dubai bus stops have air conditioning?",
+  "colour": "sun",
+  "checked": "2026-11-28",
+  "note": "The shelters, bus, screen, map lines and people are generic drawings. The times on the screen (3, 7, 12 min) are made up.",
+  "facts": [
+    {
+      "said": "Dubai's roads authority (RTA) sorts its bus shelters into four types by daily riders: main (over 750 a day), secondary (250 to 750), standard (100 to 250), pick up and drop off (under 100).",
+      "sources": [
+        {
+          "name": "Dubai Media Office, RTA bus shelters (12 Apr 2026)",
+          "url": "https://mediaoffice.ae/en/news/2026/april/12-04/rta"
+        },
+        {
+          "name": "Dubai Media Office, RTA completes 595 bus shelters in key areas across Dubai (7 Dec 2025)",
+          "url": "https://www.mediaoffice.ae/en/news/2025/december/07-12/rta-completes-595-bus-shelters-in-key-areas-across-dubai"
+        }
+      ]
+    },
+    {
+      "said": "Main stops get an air conditioned waiting area, plus shaded seats outside.",
+      "sources": [
+        {
+          "name": "Dubai Media Office, RTA bus shelters (12 Apr 2026)",
+          "url": "https://mediaoffice.ae/en/news/2026/april/12-04/rta"
+        },
+        {
+          "name": "RTA, Completion of 595 bus shelters for public transport users (7 Dec 2025)",
+          "url": "https://www.rta.ae/wps/portal/rta/ae/home/news-and-media/all-news/NewsDetails/completion-of-595-bus-shelters-for-public-transport-users"
+        }
+      ]
+    },
+    {
+      "said": "Quieter stops get shade instead; the air conditioned part is only at main stops.",
+      "sources": [
+        {
+          "name": "Dubai Media Office, RTA to construct 762 bus shelters in key Dubai areas by 2025 (24 Dec 2023)",
+          "url": "https://mediaoffice.ae/en/news/2023/December/24-12/RTA-Bus-Shelters"
+        },
+        {
+          "name": "Gulf News, RTA unveils hundreds of new bus shelters in Dubai (Dec 2025)",
+          "url": "https://gulfnews.com/uae/transport/look-rta-unveils-hundreds-of-new-bus-shelters-in-dubai-1.500371697"
+        }
+      ]
+    },
+    {
+      "said": "The new shelters have a screen with the bus map and timings, and a space kept for wheelchairs.",
+      "sources": [
+        {
+          "name": "Dubai Media Office, RTA bus shelters (12 Apr 2026)",
+          "url": "https://mediaoffice.ae/en/news/2026/april/12-04/rta"
+        },
+        {
+          "name": "Dubai Media Office, RTA completes 595 bus shelters in key areas across Dubai (7 Dec 2025)",
+          "url": "https://www.mediaoffice.ae/en/news/2025/december/07-12/rta-completes-595-bus-shelters-in-key-areas-across-dubai"
+        }
+      ]
+    },
+    {
+      "said": "By April 2026, 726 new shelters were finished.",
+      "sources": [
+        {
+          "name": "Dubai Media Office, RTA bus shelters (12 Apr 2026)",
+          "url": "https://mediaoffice.ae/en/news/2026/april/12-04/rta"
+        },
+        {
+          "name": "Khaleej Times, Dubai RTA installs 726 bus shelters",
+          "url": "https://www.khaleejtimes.com/uae/transport/dubai-rta-installs-726-smart-bus-shelters"
+        }
+      ]
+    },
+    {
+      "said": "The bus network carries over 192 million riders a year.",
+      "sources": [
+        {
+          "name": "Dubai Media Office, RTA bus shelters (12 Apr 2026)",
+          "url": "https://mediaoffice.ae/en/news/2026/april/12-04/rta"
+        },
+        {
+          "name": "Arabian Business, Dubai completes 595 new bus shelters (Dec 2025)",
+          "url": "https://www.arabianbusiness.com/industries/transport/dubai-completes-595-new-bus-shelters-as-rta-nears-final-phase-of-citywide-upgrade"
+        }
+      ]
+    }
+  ]
+}

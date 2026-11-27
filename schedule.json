@@ -202,6 +202,30 @@
       "trial": "SS_PERFORMANCE",
       "topic": "004-number-plates",
       "variant": "2d trial"
+    },
+    {
+      "id": "s-006-teaser",
+      "kind": "story",
+      "file": "stories/s-006-teaser.mp4",
+      "publish_at": "2026-11-29T12:30:00+04:00",
+      "approved": true
+    },
+    {
+      "id": "006-bus-stops",
+      "file": "006-bus-stops.mp4",
+      "publish_at": "2026-11-29T20:00:00+04:00",
+      "thumb_offset_ms": 2700,
+      "caption": "Why do some Dubai bus stops have air conditioning?\nDubai's roads authority sorts its shelters into four types by riders a day. Over 750 a day makes a main stop, and main stops get an air conditioned waiting area plus shaded seats outside. Quieter stops get shade.\nThe new shelters also have a screen with the bus map and timings, and a space kept for wheelchairs. By April 2026, 726 were finished, for a bus network that carries over 192 million riders a year.\n\nSend this to the friend who says nobody takes the bus in Dubai.\n\nSources: Dubai Media Office, RTA, Gulf News, Khaleej Times.\nIllustrated explainer, not to scale.\n#BusStop #Dubai #UAE #HowItWorks #LeshExplained",
+      "approved": true,
+      "cover": "006-bus-stops-cover.jpg",
+      "duration_s": 41.97
+    },
+    {
+      "id": "s-006-new",
+      "kind": "story",
+      "file": "stories/s-006-new.jpg",
+      "publish_at": "2026-11-29T20:05:00+04:00",
+      "approved": true
     }
   ]
 }

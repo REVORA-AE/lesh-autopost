@@ -235,7 +235,7 @@ def do_insights():
                 row[m] = r["data"][0]["values"][0]["value"] if "values" in r["data"][0] else r["data"][0].get("total_value", {}).get("value")
             except Exception as ex:  # a metric can be unavailable for a fresh reel, and story numbers vanish after 24 hours
                 row[m] = None
-                if not warned:   # say why once per run (the message holds the API's answer, never the token)
+                if not warned and not story:   # say why once per run for reels (the message holds the API's answer, never the token)
                     log("insights: first error:", str(ex)[:400]); warned = True
         if story:
             if any(row.get(m) is not None for m in STORY_METRICS):

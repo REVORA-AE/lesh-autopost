@@ -1,17 +1,10 @@
-08:06:16 account @leshexplained (business portfolio token)
-08:06:16 SKIP s-1123-new is more than 12 hours late; it needs a new time
-08:06:16 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-08:06:16 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
-08:06:16 preparing s-005-teaser for 2026-11-28T08:30:00+00:00
-08:06:18 container 18088234670380864 IN_PROGRESS In Progress: Media is still being processed.
-08:06:33 container 18088234670380864 IN_PROGRESS In Progress: Media is still being processed.
-08:06:48 container 18088234670380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-08:30:10 PUBLISHED s-005-teaser https://www.instagram.com/stories/leshexplained/4040231780912229666
-08:30:10 preparing s-1126-guess-q for 2026-11-28T09:00:00+00:00
-08:30:14 container 18088238672380864 IN_PROGRESS In Progress: Media is still being processed.
-08:30:30 container 18088238672380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-09:00:04 PUBLISHED s-1126-guess-q https://www.instagram.com/stories/leshexplained/4040243778182558834
-09:00:04 preparing s-1126-guess-a for 2026-11-28T09:01:00+00:00
-09:00:07 container 18088245242380864 IN_PROGRESS In Progress: Media is still being processed.
-09:00:23 container 18088245242380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-09:01:03 PUBLISHED s-1126-guess-a https://www.instagram.com/stories/leshexplained/4040258819778754535
+11:07:10 account @leshexplained (business portfolio token)
+11:07:10 preparing s-1123-new for 2026-11-21T16:05:00+00:00
+11:07:15 container 18088267157380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+11:07:15 DRY RUN ok: s-1123-new is ready to publish (container 18088267157380864 will expire unused)
+11:07:16 preparing 005-makani for 2026-11-28T16:00:00+00:00
+11:07:17 container 18088267193380864 IN_PROGRESS In Progress: Media is still being processed.
+11:07:33 container 18088267193380864 IN_PROGRESS In Progress: Media is still being processed.
+11:07:48 container 18088267193380864 IN_PROGRESS In Progress: Media is still being processed.
+11:08:03 container 18088267193380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+11:08:03 DRY RUN ok: 005-makani is ready to publish (container 18088267193380864 will expire unused)

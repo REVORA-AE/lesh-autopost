@@ -1,13 +1,4 @@
-15:36:00 account @leshexplained (business portfolio token)
-15:36:00 SKIP s-1123-new is more than 12 hours late; it needs a new time
-15:36:00 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-15:36:00 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
-15:36:02 preparing 005-makani for 2026-11-28T16:00:00+00:00
-15:36:03 container 18088328486380864 IN_PROGRESS In Progress: Media is still being processed.
-15:36:20 container 18088328486380864 IN_PROGRESS In Progress: Media is still being processed.
-15:36:35 container 18088328486380864 IN_PROGRESS In Progress: Media is still being processed.
-15:36:51 container 18088328486380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-16:00:09 PUBLISHED 005-makani https://www.instagram.com/reel/DgSl0aNBFmj/
-16:00:09 preparing s-005-new for 2026-11-28T16:05:00+00:00
-16:00:13 container 18088333496380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
-16:05:04 PUBLISHED s-005-new https://www.instagram.com/stories/leshexplained/4040470259559957449
+20:52:08 account @leshexplained (business portfolio token)
+20:52:08 SKIP s-1123-new is more than 12 hours late; it needs a new time
+20:52:08 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+20:52:08 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time

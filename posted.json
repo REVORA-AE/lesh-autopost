@@ -132,5 +132,29 @@
     "trial": null,
     "topic": "s-1125-new",
     "variant": null
+  },
+  "s-005-teaser": {
+    "media_id": "18157988449536789",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4040231780912229666",
+    "published_at": "2026-11-28T08:30:04+0000",
+    "trial": null,
+    "topic": "s-005-teaser",
+    "variant": null
+  },
+  "s-1126-guess-q": {
+    "media_id": "18136825750749481",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4040243778182558834",
+    "published_at": "2026-11-28T09:00:02+0000",
+    "trial": null,
+    "topic": "s-1126-guess-q",
+    "variant": null
+  },
+  "s-1126-guess-a": {
+    "media_id": "17890689438690878",
+    "permalink": "https://www.instagram.com/stories/leshexplained/4040258819778754535",
+    "published_at": "2026-11-28T09:01:00+0000",
+    "trial": null,
+    "topic": "s-1126-guess-a",
+    "variant": null
   }
 }

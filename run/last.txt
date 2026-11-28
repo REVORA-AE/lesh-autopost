@@ -1,4 +1,13 @@
-14:10:26 insights: first error: GET /17922496572529165/insights -> 400 {"error":{"message":"Unsupported get request. Object with ID '17922496572529165' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"AY5aia2XVOEZhryzau
-14:11:05 stats saved for 4 reels and 0 stories
-14:11:06 comments unavailable for 004-number-plates GET /17922496572529165/comments -> 400 {"error":{"message":"Unsupported get request. Object with ID '17922496572529165' does not exist, cannot be loaded due to 
-14:11:06 comments: 0 new, 0 in the inbox, 0 open questions
+15:36:00 account @leshexplained (business portfolio token)
+15:36:00 SKIP s-1123-new is more than 12 hours late; it needs a new time
+15:36:00 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
+15:36:00 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+15:36:02 preparing 005-makani for 2026-11-28T16:00:00+00:00
+15:36:03 container 18088328486380864 IN_PROGRESS In Progress: Media is still being processed.
+15:36:20 container 18088328486380864 IN_PROGRESS In Progress: Media is still being processed.
+15:36:35 container 18088328486380864 IN_PROGRESS In Progress: Media is still being processed.
+15:36:51 container 18088328486380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+16:00:09 PUBLISHED 005-makani https://www.instagram.com/reel/DgSl0aNBFmj/
+16:00:09 preparing s-005-new for 2026-11-28T16:05:00+00:00
+16:00:13 container 18088333496380864 FINISHED Finished: Media has been uploaded and it is ready to be published.
+16:05:04 PUBLISHED s-005-new https://www.instagram.com/stories/leshexplained/4040470259559957449

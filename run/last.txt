@@ -1,4 +1,4 @@
-12:53:11 account @leshexplained (business portfolio token)
-12:53:11 SKIP s-1123-new is more than 12 hours late; it needs a new time
-12:53:11 SKIP s-1124-guess-q is more than 12 hours late; it needs a new time
-12:53:11 SKIP s-1124-guess-a is more than 12 hours late; it needs a new time
+14:10:26 insights: first error: GET /17922496572529165/insights -> 400 {"error":{"message":"Unsupported get request. Object with ID '17922496572529165' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api","code":100,"type":"GraphMethodException","error_subcode":33,"fbtrace_id":"AY5aia2XVOEZhryzau
+14:11:05 stats saved for 4 reels and 0 stories
+14:11:06 comments unavailable for 004-number-plates GET /17922496572529165/comments -> 400 {"error":{"message":"Unsupported get request. Object with ID '17922496572529165' does not exist, cannot be loaded due to 
+14:11:06 comments: 0 new, 0 in the inbox, 0 open questions
